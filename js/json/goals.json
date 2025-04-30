@@ -1,0 +1,4 @@
+{
+  "dailyGoal": { "xpTarget": 500, "reward": "Daily Streak Boost", "completed": false },
+  "weeklyGoal": { "xpTarget": 2000, "reward": "Weekly Coin Bonus", "completed": false }
+}

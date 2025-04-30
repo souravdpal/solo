@@ -1,0 +1,26 @@
+/* css/start.css */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.start-card {
+  padding: 40px;
+  background: linear-gradient(135deg, #16213e, #1a1a2e);
+  border-radius: 15px;
+  box-shadow: inset 0 0 20px rgba(0, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.subtitle {
+  color: #00ff00;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px #00ff00;
+}

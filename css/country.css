@@ -1,0 +1,71 @@
+/* css/country.css */
+.header {
+    padding: 20px;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border-bottom: 3px solid #00d4ff;
+    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+  }
+  
+  .header h1 {
+    color: #00d4ff;
+    font-size: 2.5em;
+    text-shadow: 0 0 15px #00d4ff;
+    text-align: center;
+  }
+  
+  .country-section {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #0f172a;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0, 212, 255, 0.3);
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  .country-select {
+    width: 70%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #16213e;
+    border: 2px solid #00d4ff;
+    border-radius: 8px;
+    color: #00d4ff;
+    font-size: 1.2em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="%2300d4ff"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+  }
+  
+  .country-select:focus {
+    border-color: #ff4d4d;
+    box-shadow: 0 0 15px #ff4d4d;
+    outline: none;
+  }
+  
+  .country-display {
+    margin-top: 20px;
+    color: #b0b0ff;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .country-display .flag {
+    font-size: 1.5em;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @media (max-width: 768px) {
+    .header h1 { font-size: 2em; }
+    .country-select { width: 90%; }
+  }

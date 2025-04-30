@@ -1,0 +1,16 @@
+[Unit]
+Description=Start solo server and ngrok at boot
+After=network.target
+
+[Service]
+User=kali  # Replace 'kali' with your actual username
+WorkingDirectory=/media/kali/sourav_personal/solo
+ExecStart=/bin/bash -c 'cd /media/kali/sourav_personal/solo && node server.js || node server.js && ngrok http 3000'
+Restart=always
+Environment=PATH=/usr/bin:/usr/local/bin
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=solo_startup
+
+[Install]
+WantedBy=multi-user.target

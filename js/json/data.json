@@ -1,0 +1,145 @@
+{
+  "leaderboard": [
+    {
+      "username": "Sourav",
+      "xp": 1500000,
+      "country": "india",
+      "coins": 100
+    },
+    {
+      "username": "Diya",
+      "xp": 108810,
+      "country": "india",
+      "coins": 100
+    },
+    {
+      "username": "Sung Jin-woo",
+      "xp": 1000637,
+      "country": "korea",
+      "coins": 100
+    },
+    {
+      "username": "Cha Hae-in",
+      "xp": 100049,
+      "country": "korea",
+      "coins": 100
+    },
+    {
+      "username": "Sara Ali",
+      "xp": 98742,
+      "country": "uae",
+      "coins": 100
+    },
+    {
+      "username": "Noah Tremblay",
+      "xp": 98677,
+      "country": "canada",
+      "coins": 100
+    },
+    {
+      "username": "Yuki Arai",
+      "xp": 98658,
+      "country": "japan",
+      "coins": 100
+    },
+    {
+      "username": "Chen Wei",
+      "xp": 97261,
+      "country": "china",
+      "coins": 100
+    },
+    {
+      "username": "Lena Müller",
+      "xp": 97107,
+      "country": "germany",
+      "coins": 100
+    },
+    {
+      "username": "Chen Wei",
+      "xp": 97027,
+      "country": "china",
+      "coins": 100
+    },
+    {
+      "username": "testsourav",
+      "xp": 0,
+      "country": "Canada",
+      "coins": 100
+    },
+    {
+      "username": "david",
+      "xp": 0,
+      "country": "USA",
+      "coins": 100
+    },
+    {
+      "username": "~hostkeycheck!checkinginjections",
+      "xp": 0,
+      "country": "france",
+      "coins": 100
+    },
+    {
+      "username": "brave1",
+      "xp": 0,
+      "country": "australia",
+      "coins": 100
+    },
+    {
+      "username": "souravsrv",
+      "xp": 0,
+      "country": "south korea",
+      "coins": 100
+    },
+    {
+      "username": "priya",
+      "xp": 0,
+      "country": "australia",
+      "coins": 100
+    },
+    {
+      "username": "riya",
+      "xp": 0,
+      "country": "india",
+      "coins": 100
+    },
+    {
+      "username": "testman",
+      "xp": 0,
+      "country": "japan",
+      "coins": 100
+    },
+    {
+      "username": "testman09",
+      "xp": 0,
+      "country": "japan",
+      "coins": 100
+    },
+    {
+      "username": "maker ",
+      "xp": 210,
+      "country": "united kingdom",
+      "coins": 100
+    },
+    {
+      "username": "Phone",
+      "xp": 0,
+      "country": "india",
+      "coins": 100
+    },
+    {
+      "username": "checking",
+      "xp": 0,
+      "country": "united kingdom",
+      "coins": 100
+    }
+  ],
+  "india": [
+    "dev",
+    "riya",
+    "nodejs..__++=893",
+    "diya"
+  ],
+  "tonga": [
+    "Barline"
+  ]
+}

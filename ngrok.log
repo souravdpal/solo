@@ -1,0 +1,4 @@
+Your ngrok-agent version "2.3.41" is too old. The minimum supported agent version for your account is "3.7.0". Please update to a newer version with `ngrok update`, by downloading from https://ngrok.com/download, or by updating your SDK version. Paid accounts are currently excluded from minimum agent version requirements. To begin handling traffic immediately without updating your agent, upgrade to a paid plan: https://dashboard.ngrok.com/billing/subscription.
+
+ERR_NGROK_121
+

@@ -1,0 +1,7 @@
+{
+    "achievements": [
+      { "id": 1, "name": "Quest Beginner", "description": "Complete your first quest", "xpThreshold": 0, "badge": "Quest Starter" },
+      { "id": 2, "name": "Rising Star", "description": "Complete 5 quests", "questCount": 5, "badge": "Rising Star" },
+      { "id": 3, "name": "S-Rank Achiever", "description": "Reach S-Rank", "rank": "S-Rank", "badge": "S-Rank Elite" }
+    ]
+  }

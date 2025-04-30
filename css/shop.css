@@ -1,0 +1,18 @@
+.shop-card .buy-btn {
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.shop-card .buy-btn:hover {
+  background: #ff8080;
+}
+
+#coin-count {
+  color: #ffd700;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
+}

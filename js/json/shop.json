@@ -1,0 +1,6 @@
+{
+    "items": [
+      { "id": 1, "name": "Double XP Boost", "cost": 50, "effect": "doubleXP", "duration": 3600000 },
+      { "id": 2, "name": "Neon Skin", "cost": 100, "effect": "cosmetic", "skin": "neon" }
+    ]
+  }

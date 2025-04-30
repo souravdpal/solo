@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="assets/images/solo.png" type="image/svg+xml">
+
+  <link rel="icon" href="/favicon.png" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rise, Hunter - Quests</title>
+  <link rel="stylesheet" href="/css/quests.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="dashboard" class="dashboard">
+    <h1 class="title">Rise, Hunter! <span>⚡</span></h1>
+    <p id="greeting" class="greeting">Hello, User</p>
+    <p id="streak" class="streak">Streak: 0 days</p>
+    <p id="live-ranking" class="live-ranking">Live Rank: #N/A</p>
+    <div class="xp-bar">
+      <div id="xp-progress" class="xp-progress"></div>
+    </div>
+    <p id="xp-text" class="xp-text">0 / 100000 XP</p>
+    <div class="button-group"  >
+      <button id="battle-btn" class="btn"><a href="battle.html" id = "heack" > battle!</a></button>
+      <button id="leaderboard-btn" class="btn" id = "heack">LIVE_LEADERBOARD</button>
+      <button id="skills-btn" class="btn" id = "heack">skills</button>
+      <button id="team-btn" class="btn" id = "heack"><a href="team.html">TEAM</a></button>
+      <button id="shop-btn" class="btn" id = "heack"><a href="shop.html">shop</a></button>
+      <button id="profile-btn" class="btn" id = "heack">Profile</button>
+      <button id="notification-btn" class="btn" id = "heack">Notifications <span id="unseen-count">0</span></button>
+    </div>
+    <input type="text" id="search" class="search-bar" placeholder="Search quests...">
+    <button id="add-quest" class="btn add-quest">Add Quest</button>
+    <div id="quest-list" class="quest-list"></div>
+    <div class="goals">
+      <p id="daily-goal">Daily Goal: 500 XP</p>
+      <p id="daily-progress">0 XP</p>
+      <p id="daily-reward">0 XP</p>
+      <p id="weekly-goal">Weekly Goal: 2000 XP</p>
+      <p id="weekly-progress">0 XP</p>
+      <p id="weekly-reward">0 XP</p>
+    </div>
+  </div>
+
+  <!-- Modal for adding a new quest -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-modal" class="close">×</span>
+      <h2>Add New Quest</h2>
+      <form id="new-quest-form">
+        <input type="text" id="new-quest-name" placeholder="Quest Name" required>
+        <select id="new-quest-category" required>
+          <option value="" disabled selected>Select Category</option>
+          <option value="Work">Work</option>
+          <option value="Fitness">Fitness</option>
+          <option value="Learning">Learning</option>
+          <option value="Personal">Personal</option>
+        </select>
+        <input type="number" id="new-quest-minutes" placeholder="Minutes" required>
+        <button type="button" id="save-quest" class="btn">Save Quest</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="/js/quests.js"></script>
+</body>
+</html>

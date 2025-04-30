@@ -1,0 +1,228 @@
+{
+  "Sourav": {
+    "username": "Sourav",
+    "country": "india",
+    "password": "password",
+    "xp": 1500000,
+    "rank": "S-Rank",
+    "inventory": [
+      "Novice Hunter"
+    ],
+    "achievements": [],
+    "coins": 100,
+    "skin": "default",
+    "team": [
+      "Diya",
+      "Sung Jin-woo"
+    ]
+  },
+  "Diya": {
+    "username": "Diya",
+    "country": "india",
+    "password": "diya",
+    "xp": 108810,
+    "rank": "S-Rank",
+    "inventory": [
+      "Novice Hunter"
+    ],
+    "achievements": [],
+    "coins": 100,
+    "skin": "default",
+    "team": []
+  },
+  "riya": {
+    "username": "riya",
+    "country": "india",
+    "password": "riya",
+    "xp": 0,
+    "rank": "E-Rank",
+    "inventory": [
+      "Novice Hunter"
+    ],
+    "achievements": [],
+    "coins": 100,
+    "skin": "default",
+    "displayName": "riya love"
+  },
+  "nodejs..__++=893": {
+    "username": "nodejs..__++=893",
+    "country": "india",
+    "password": "node",
+    "xp": 0,
+    "rank": "E-Rank",
+    "inventory": [
+      "Novice Hunter"
+    ],
+    "achievements": [],
+    "coins": 100,
+    "skin": "default"
+  },
+  "StormPulse": {
+    "username": "StormPulse",
+    "country": "usa",
+    "password": "pulse2025",
+    "xp": 950000,
+    "rank": "A-Rank",
+    "inventory": [
+      "Novice Hunter",
+      "Thunder Axe"
+    ],
+    "achievements": [
+      "First Kill"
+    ],
+    "coins": 400,
+    "skin": "default",
+    "team": [
+      "IronShade"
+    ]
+  },
+  "IronShade": {
+    "username": "IronShade",
+    "country": "brazil",
+    "password": "shade123",
+    "xp": 85000,
+    "rank": "C-Rank",
+    "inventory": [
+      "Novice Hunter",
+      "Iron Shield"
+    ],
+    "achievements": [],
+    "coins": 180,
+    "skin": "default",
+    "displayName": "Shade"
+  },
+  "MoonReaper": {
+    "username": "MoonReaper",
+    "country": "japan",
+    "password": "moonx",
+    "xp": 1200000,
+    "rank": "S-Rank",
+    "inventory": [
+      "Novice Hunter",
+      "Lunar Blade",
+      "Star Cloak"
+    ],
+    "achievements": [
+      "Elite Hunter",
+      "Moonlight"
+    ],
+    "coins": 500,
+    "skin": "phantom",
+    "team": []
+  },
+  "SandViper": {
+    "username": "SandViper",
+    "country": "egypt",
+    "password": "viper9",
+    "xp": 45000,
+    "rank": "D-Rank",
+    "inventory": [
+      "Novice Hunter"
+    ],
+    "achievements": [],
+    "coins": 130,
+    "skin": "default",
+    "team": []
+  },
+  "FrostWarden": {
+    "username": "FrostWarden",
+    "country": "canada",
+    "password": "iceward",
+    "xp": 105000,
+    "rank": "B-Rank",
+    "inventory": [
+      "Novice Hunter",
+      "Frost Staff"
+    ],
+    "achievements": [
+      "Ice Slayer"
+    ],
+    "coins": 250,
+    "skin": "glacial",
+    "displayName": "Warden"
+  },
+  "BlazeRift": {
+    "username": "BlazeRift",
+    "country": "mexico",
+    "password": "riftfire",
+    "xp": 8000,
+    "rank": "E-Rank",
+    "inventory": [
+      "Novice Hunter"
+    ],
+    "achievements": [],
+    "coins": 100,
+    "skin": "default",
+    "team": []
+  },
+  "StarCrest": {
+    "username": "StarCrest",
+    "country": "france",
+    "password": "creststar",
+    "xp": 110000,
+    "rank": "B-Rank",
+    "inventory": [
+      "Novice Hunter",
+      "Star Ring"
+    ],
+    "achievements": [],
+    "coins": 260,
+    "skin": "default",
+    "team": [
+      "FrostWarden"
+    ]
+  },
+  "TideBreaker": {
+    "username": "TideBreaker",
+    "country": "australia",
+    "password": "tide2025",
+    "xp": 600000,
+    "rank": "A-Rank",
+    "inventory": [
+      "Novice Hunter",
+      "Trident"
+    ],
+    "achievements": [
+      "Wave Master"
+    ],
+    "coins": 350,
+    "skin": "default",
+    "displayName": "Tide"
+  },
+  "ShadowClaw": {
+    "username": "ShadowClaw",
+    "country": "nigeria",
+    "password": "clawdark",
+    "xp": 25000,
+    "rank": "D-Rank",
+    "inventory": [
+      "Novice Hunter"
+    ],
+    "achievements": [],
+    "coins": 140,
+    "skin": "default",
+    "team": []
+  },
+  "VoidSpecter": {
+    "username": "VoidSpecter",
+    "country": "south korea",
+    "password": "void99",
+    "xp": 1400000,
+    "rank": "S-Rank",
+    "inventory": [
+      "Novice Hunter",
+      "Dark Orb",
+      "Shadow Cloak"
+    ],
+    "achievements": [
+      "Void Walker",
+      "Elite Slayer"
+    ],
+    "coins": 480,
+    "skin": "shadow",
+    "team": [
+      "StormPulse",
+      "SandViper"
+    ]
+  }
+}

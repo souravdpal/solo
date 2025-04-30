@@ -1,0 +1,30 @@
+{
+  "saurav": [
+    {
+      "id": 1,
+      "message": "You completed the daily quest!",
+      "timestamp": "2025-04-29T10:30:00Z",
+      "read": false
+    },
+    {
+      "id": 2,
+      "message": "Level up! You're now Level 5.",
+      "timestamp": "2025-04-28T17:45:00Z",
+      "read": true
+    }
+  ],
+  "riya": [
+    {
+      "id": 1,
+      "message": "New motivational quote added.",
+      "timestamp": "2025-04-29T08:00:00Z",
+      "read": false
+    },
+    {
+      "id": 2,
+      "message": "You missed a task yesterday!",
+      "timestamp": "2025-04-28T20:15:00Z",
+      "read": false
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="assets/images/solo.png" type="image/svg+xml">
+
+  <link rel="icon" href="/favicon.png" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solo Leveling - Profile</title>
+  <link rel="stylesheet" href="/css/profile.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="profile-container" class="profile-container">
+    <h1 class="title">Hunter Profile <span>⚡</span></h1>
+    <div class="button-group">
+      <button id="back-to-quests" class="btn">BACK TO QUESTS</button>
+      <button id="logout-btn" class="btn logout-btn">Logout</button>
+    </div>
+    <div class="profile-card">
+      <div class="profile-header">
+        <h2 id="username">Username</h2>
+        <div class="name-section">
+          <p id="name">Name: Not Set</p>
+          <div class="name-edit">
+            <input type="text" id="name-input" placeholder="Enter display name" maxlength="20">
+            <button id="set-name-btn" class="btn set-name-btn">Set Name</button>
+          </div>
+        </div>
+        <p id="rank">Rank: E-Rank</p>
+      </div>
+      <div class="profile-details">
+        <p id="xp">XP: 0</p>
+        <p id="country">Country: <span class="flag">🌍</span></p>
+        <p id="coins">Coins: 0</p>
+      </div>
+      <div class="xp-bar">
+        <div id="xp-progress" class="xp-progress"></div>
+      </div>
+      <div class="inventory">
+        <h3>Inventory</h3>
+        <ul id="inventory-list" class="inventory-list"></ul>
+      </div>
+      <div class="friends">
+        <h3>Friends</h3>
+        <p id="friends">Coming Soon...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/profile.js"></script>
+</body>
+</html>

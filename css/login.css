@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  background: #1a1a2e;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ffd700;
+}
+.login-box {
+  background: #2a2a4e;
+  padding: 30px;
+  border: 2px solid #00f;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+}
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background: #1a1a2e;
+  border: 1px solid #00f;
+  border-radius: 5px;
+  color: white;
+  font-size: 1em;
+}
+input::placeholder {
+  color: #888;
+}
+button {
+  width: 100%;
+  padding: 10px;
+  background: #00f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+button:hover {
+  background: #0056b3;
+}
+button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+#error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+.hidden {
+  display: none;
+}
+p {
+  margin-top: 15px;
+  font-size: 0.9em;
+}
+a {
+  color: #00f;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}

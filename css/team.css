@@ -1,0 +1,48 @@
+/* css/team.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border-bottom: 3px solid #00d4ff;
+  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+}
+
+.header h1 {
+  color: #00d4ff;
+  font-size: 2.5em;
+  text-shadow: 0 0 15px #00d4ff;
+}
+
+.team-list {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #0f172a;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.3);
+}
+
+.team-item {
+  background: #16213e;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 0 15px rgba(255, 77, 77, 0.3);
+}
+
+.team-item p {
+  color: #b0b0ff;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .header { flex-direction: column; gap: 10px; }
+  .team-list { padding: 15px; }
+}

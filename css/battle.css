@@ -1,0 +1,64 @@
+/* css/battle.css */
+.battle-card {
+    background: rgba(26, 26, 46, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    text-align: center;
+  }
+  
+  #monsters-list {
+    margin: 10px 0;
+  }
+  
+  .monster-option {
+    background: #16213e;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .monster-option:hover {
+    transform: scale(1.05);
+  }
+  
+  #battle-result {
+    color: #ff0000;
+    margin-top: 10px;
+  }
+.battle-option {
+  background: linear-gradient(135deg, #16213e, #1a1a2e);
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  transition: all 0.3s;
+}
+
+.battle-option:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+  animation: battleGlow 0.5s infinite alternate;
+}
+
+@keyframes battleGlow {
+  from { box-shadow: 0 0 10px #ff00ff; }
+  to { box-shadow: 0 0 20px #00f0ff; }
+}
+
+.battle-option p {
+  color: #00f0ff;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .battle-option {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
