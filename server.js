@@ -6,30 +6,56 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 
+// Optional: Redis for persistent session storage (uncomment if using Redis)
+// const RedisStore = require('connect-redis')(session);
+// const redis = require('redis');
+
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// SQLite session store with file-based storage
-const sequelize = new Sequelize({
-  dialect: 'sqlite',
-  storage: path.join(__dirname, 'session.sqlite') // File-based SQLite database
-});
-const sessionStore = new SequelizeStore({
-  db: sequelize
-});
-sessionStore.sync();
+// Determine environment
+const isProduction = process.env.NODE_ENV === 'production';
+
+// Configure session store based on environment
+let sessionStore;
+if (isProduction) {
+  // Use in-memory store for Render (temporary solution for free tier)
+  sessionStore = new session.MemoryStore();
+  console.log('Using in-memory session store for production');
+  // Uncomment to use Redis in production (recommended for persistence)
+  /*
+  const redisClient = redis.createClient({
+    url: process.env.REDIS_URL || 'redis://localhost:6379'
+  });
+  redisClient.on('error', (err) => console.error('Redis error:', err));
+  sessionStore = new RedisStore({ client: redisClient });
+  console.log('Using Redis session store for production');
+  */
+} else {
+  // Use SQLite for local development
+  const sequelize = new Sequelize({
+    dialect: 'sqlite',
+    storage: path.join(__dirname, 'session.sqlite')
+  });
+  sessionStore = new SequelizeStore({
+    db: sequelize
+  });
+  sessionStore.sync();
+  console.log('Using SQLite session store for development');
+}
 
 // Session setup with cookies
 app.use(session({
-  secret: 'sourav-secret-key',
+  secret: process.env.SESSION_SECRET || 'sourav-secret-key',
   resave: false,
   saveUninitialized: false,
   store: sessionStore,
   cookie: {
-    secure: false, // Set to true in production with HTTPS
+    secure: isProduction, // True for HTTPS on Render, false for local HTTP
     httpOnly: true,
     maxAge: 24 * 60 * 60 * 1000 // 24 hours
+    // sameSite: 'lax' // Uncomment to prevent CSRF if needed
   }
 }));
 
@@ -38,25 +64,44 @@ app.use(express.static(path.join(__dirname)));
 app.use('/js', express.static(path.join(__dirname, 'js')));
 app.use('/css', express.static(path.join(__dirname, 'css')));
 
-// Define requireAuth middleware first
+// Initialize JSON files if they don't exist
+const userFilePath = path.join(__dirname, 'js/json/user.json');
+const notifFilePath = path.join(__dirname, 'js/json/notifications.json');
+if (!fs.existsSync(userFilePath)) {
+  fs.writeFileSync(userFilePath, JSON.stringify({}, null, 2), 'utf8');
+  console.log('Initialized user.json');
+}
+if (!fs.existsSync(notifFilePath)) {
+  fs.writeFileSync(notifFilePath, JSON.stringify({ notifications: [] }, null, 2), 'utf8');
+  console.log('Initialized notifications.json');
+}
+
+// Define requireAuth middleware
 const requireAuth = (req, res, next) => {
   console.log('Checking auth for:', req.path, 'Session:', req.session);
   if (req.session.authorized && req.session.username) {
     next();
   } else {
-    console.warn('Unauthorized, redirecting to /login.html');
+    console.warn('Unauthorized, redirecting to /login.html. Session:', req.session);
     res.redirect('/login.html');
   }
 };
 
 // Routes for HTML files
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'login.html'))); // Serve login.html at root
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'login.html')));
 app.get('/signup.html', (req, res) => res.sendFile(path.join(__dirname, 'signup.html')));
 app.get('/quests.html', requireAuth, (req, res) => res.sendFile(path.join(__dirname, 'quests.html')));
+app.get('/notifications.html', requireAuth, (req, res) => res.sendFile(path.join(__dirname, 'notifications.html')));
+app.get('/profile.html', requireAuth, (req, res) => res.sendFile(path.join(__dirname, 'profile.html')));
+app.get('/shop.html', requireAuth, (req, res) => res.sendFile(path.join(__dirname, 'shop.html')));
+app.get('/leaderboard.html', requireAuth, (req, res) => res.sendFile(path.join(__dirname, 'leaderboard.html')));
+app.get('/battle.html', requireAuth, (req, res) => res.sendFile(path.join(__dirname, 'battle.html')));
+app.get('/team.html', requireAuth, (req, res) => res.sendFile(path.join(__dirname, 'team.html')));
+app.get('/skills.html', requireAuth, (req, res) => res.sendFile(path.join(__dirname, 'skills.html')));
 
 // Get session username
 app.get('/api/get-session-username', (req, res) => {
-  console.log('Session:', req.session);
+  console.log('Session check:', req.session);
   if (req.session.username) {
     res.json({ username: req.session.username });
   } else {

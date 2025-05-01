@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
+  // DOM Elements
   const dashboard = document.getElementById('dashboard');
   const questList = document.getElementById('quest-list');
   const addQuestBtn = document.getElementById('add-quest');
@@ -26,19 +27,25 @@ document.addEventListener('DOMContentLoaded', async () => {
   const weeklyProgress = document.getElementById('weekly-progress');
   const weeklyReward = document.getElementById('weekly-reward');
 
-  if (!dashboard || !questList || !addQuestBtn || !modal || !closeModalBtn || !saveQuestBtn ||
-      !newQuestName || !newQuestCategory || !newQuestMinutes || !searchBar || !greeting ||
-      !streak || !liveRanking || !xpProgress || !xpText || !leaderboardBtn || !profileBtn ||
-      !notificationBtn || !unseenCountEl || !toast || !dailyGoal || !dailyProgress ||
-      !dailyReward || !weeklyGoal || !weeklyProgress || !weeklyReward) {
-    console.error('One or more required DOM elements are missing!');
-    return;
+  // Validate DOM elements
+  const requiredElements = {
+    dashboard, questList, addQuestBtn, modal, closeModalBtn, saveQuestBtn,
+    newQuestName, newQuestCategory, newQuestMinutes, searchBar, greeting,
+    streak, liveRanking, xpProgress, xpText, leaderboardBtn, profileBtn,
+    notificationBtn, unseenCountEl, toast, dailyGoal, dailyProgress,
+    dailyReward, weeklyGoal, weeklyProgress, weeklyReward
+  };
+  for (const [id, element] of Object.entries(requiredElements)) {
+    if (!element) {
+      console.error(`Missing DOM element: ${id}`);
+      return;
+    }
   }
 
   let user = null;
   let quests = [];
   let xp = 0;
-  const XP_PER_MINUTE = 10; // 100 XP for 10 minutes = 10 XP per minute
+  const XP_PER_MINUTE = 10;
 
   const rankThresholds = [
     { rank: 'E-Rank', xp: 0, badge: 'Novice Hunter' },
@@ -55,35 +62,48 @@ document.addEventListener('DOMContentLoaded', async () => {
     return rankThresholds.find(r => xp < (rankThresholds[rankThresholds.length - 1].xp || Infinity) && xp >= r.xp) || rankThresholds[0];
   }
 
-  async function fetchUser() { 
-    try {
-      const response = await fetch('/api/get-session-username');
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'Failed to fetch session username');
-      }
-      const { username } = await response.json();
-      if (!username) throw new Error('No username found in session');
+  // Fetch user with retry logic
+  async function fetchUser(maxRetries = 3, delay = 1000) {
+    for (let attempt = 1; attempt <= maxRetries; attempt++) {
+      try {
+        const sessionResponse = await fetch('/api/get-session-username', {
+          credentials: 'include' // Ensure cookies are sent
+        });
+        if (!sessionResponse.ok) {
+          const errorData = await sessionResponse.json();
+          throw new Error(errorData.error || `Failed to fetch session (Attempt ${attempt})`);
+        }
+        const { username } = await sessionResponse.json();
+        if (!username) throw new Error('No username in session');
 
-      const userResponse = await fetch('/js/json/user.json');
-      if (!userResponse.ok) throw new Error('Failed to fetch user data');
-      const data = await userResponse.json();
-      const userData = data[username];
-      if (!userData) throw new Error('User not found in user.json');
-      return userData;
-    } catch (error) {
-      console.error('Error fetching user:', error.message);
-      return null;
+        const userResponse = await fetch('/js/json/user.json', {
+          credentials: 'include'
+        });
+        if (!userResponse.ok) throw new Error('Failed to fetch user data');
+        const data = await userResponse.json();
+        const userData = data[username];
+        if (!userData) throw new Error('User not found');
+        console.log('User fetched successfully:', username);
+        return userData;
+      } catch (error) {
+        console.warn(`Fetch user attempt ${attempt} failed:`, error.message);
+        if (attempt === maxRetries) {
+          console.error('Max retries reached for fetching user:', error.message);
+          return null;
+        }
+        await new Promise(resolve => setTimeout(resolve, delay * attempt));
+      }
     }
   }
 
+  // Fetch quests with fallback
   async function fetchQuests() {
     if (!user || !user.username) {
       console.error('Cannot fetch quests: User not initialized');
       return [];
     }
     try {
-      const response = await fetch('/js/json/task.json');
+      const response = await fetch('/js/json/task.json', { credentials: 'include' });
       if (!response.ok) {
         if (response.status === 404) {
           console.warn('task.json not found, initializing empty');
@@ -99,28 +119,25 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
+  // Save quests
   async function saveQuests(questsData) {
     if (!user || !user.username) {
       console.error('Cannot save quests: User not initialized');
       return false;
     }
     try {
-      const response = await fetch('/js/json/task.json');
+      const response = await fetch('/js/json/task.json', { credentials: 'include' });
       let data = {};
-      if (response.ok) {
-        data = await response.json();
-      }
+      if (response.ok) data = await response.json();
       data[user.username] = { tasks: questsData };
       const putResponse = await fetch('/js/json/task.json', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
+        credentials: 'include'
       });
-      if (!putResponse.ok) {
-        const errorText = await putResponse.text();
-        throw new Error(`Failed to save tasks: ${putResponse.status} - ${errorText}`);
-      }
-      console.log('Tasks saved successfully to task.json');
+      if (!putResponse.ok) throw new Error(`Failed to save tasks: ${putResponse.status}`);
+      console.log('Tasks saved successfully');
       return true;
     } catch (error) {
       console.error('Error saving tasks:', error.message);
@@ -129,13 +146,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
+  // Save user data
   async function saveUserData(userData) {
-    if (!user || !user.username) {
-      console.error('Cannot save user data: User not initialized');
-      return;
-    }
+    if (!user || !user.username) return;
     try {
-      const response = await fetch('/js/json/user.json');
+      const response = await fetch('/js/json/user.json', { credentials: 'include' });
       if (!response.ok) throw new Error('Failed to fetch user.json');
       const data = await response.json();
       data[user.username] = userData;
@@ -143,16 +158,19 @@ document.addEventListener('DOMContentLoaded', async () => {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
+        credentials: 'include'
       });
       if (!putResponse.ok) throw new Error('Failed to save user data');
+      console.log('User data saved successfully');
     } catch (error) {
       console.error('Error saving user data:', error.message);
     }
   }
 
+  // Fetch leaderboard data
   async function fetchUsersFromData() {
     try {
-      const response = await fetch('/js/json/data.json');
+      const response = await fetch('/js/json/data.json', { credentials: 'include' });
       if (!response.ok) throw new Error('Failed to fetch users');
       const data = await response.json();
       return Array.isArray(data.leaderboard) ? data.leaderboard : [];
@@ -162,22 +180,24 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
+  // Get live ranking
   async function getLiveRanking(user, allUsers) {
     const sortedUsers = Array.isArray(allUsers) ? allUsers.map(u => ({ ...u, xp: u.xp || 0 })).sort((a, b) => b.xp - a.xp) : [];
     const rank = sortedUsers.findIndex(u => u.username === user.username) + 1;
     return rank > 0 ? `Live Rank: #${rank}` : 'Live Rank: #1';
   }
 
+  // Toast notification
   function showToast(message) {
     toast.textContent = message;
     toast.classList.remove('hidden');
     setTimeout(() => toast.classList.add('hidden'), 3000);
   }
 
+  // Get timer display
   function getTimerDisplay(quest) {
     if (!quest.timerEnd || quest.completed) return 'Completed';
     const remaining = new Date(quest.timerEnd) - new Date();
-    console.log(`Timer for ${quest.name}: ${remaining} ms`); // Debug log
     if (remaining <= 0) {
       if (!quest.completed) {
         quest.completed = true;
@@ -191,9 +211,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           showToast(`Rank Up! You're now ${rank.rank} - ${rank.badge} unlocked!`);
         }
         saveQuests(quests).then(() => saveUserData(user));
-        xpText.textContent = `${xp} / 100000 XP`;
-        xpProgress.style.width = `${(xp / 100000) * 100}%`;
-        showToast(`Quest Completed! +${quest.xp} XP`);
+        updateDashboard();
       }
       return 'Completed';
     }
@@ -202,6 +220,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   }
 
+  // Update timer display
   function updateTimerDisplay() {
     const timers = questList.querySelectorAll('.quest-timer');
     quests.forEach((quest, index) => {
@@ -220,9 +239,7 @@ document.addEventListener('DOMContentLoaded', async () => {
               showToast(`Rank Up! You're now ${rank.rank} - ${rank.badge} unlocked!`);
             }
             saveQuests(quests).then(() => saveUserData(user));
-            xpText.textContent = `${xp} / 100000 XP`;
-            xpProgress.style.width = `${(xp / 100000) * 100}%`;
-            showToast(`Quest Completed! +${quest.xp} XP`);
+            updateDashboard();
           }
           timers[index].textContent = 'Completed';
         } else {
@@ -234,6 +251,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
+  // Update dashboard stats
+  function updateDashboard() {
+    xpText.textContent = `${xp} / 100000 XP`;
+    xpProgress.style.width = `${(xp / 100000) * 100}%`;
+    showToast(`Quest Completed! +${quest.xp} XP`);
+  }
+
+  // Render quests
   function renderQuests() {
     questList.innerHTML = '';
     const filteredQuests = quests.filter(q => q.name.toLowerCase().includes(searchBar.value.toLowerCase()));
@@ -253,19 +278,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
+  // Start quest
   async function startQuest(quest) {
     if (quest.started) return;
     quest.started = true;
     const now = new Date();
-    const timerEnd = new Date(now.getTime() + quest.minutes * 60000); // Local time
+    const timerEnd = new Date(now.getTime() + quest.minutes * 60000);
     quest.timerEnd = timerEnd;
-    quest.xp = quest.minutes * XP_PER_MINUTE; // 10 XP per minute
-    console.log(`Started ${quest.name} - End Time: ${timerEnd}, XP: ${quest.xp}`); // Debug log
+    quest.xp = quest.minutes * XP_PER_MINUTE;
+    console.log(`Started ${quest.name} - End Time: ${timerEnd}, XP: ${quest.xp}`);
     await saveQuests(quests);
     renderQuests();
     showToast(`Started quest: ${quest.name}`);
   }
 
+  // Delete quest
   async function deleteQuest(questId) {
     quests = quests.filter(q => q.id !== questId);
     await saveQuests(quests);
@@ -301,7 +328,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       name,
       category,
       minutes,
-      xp: minutes * XP_PER_MINUTE, // 10 XP per minute
+      xp: minutes * XP_PER_MINUTE,
       timerEnd: null,
       started: false,
       completed: false
@@ -349,7 +376,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     dashboard.innerHTML = `
       <h1 class="title">Rise, Hunter! <span>⚡</span></h1>
       <p style="color: #ff4d4d; font-size: 16px; margin: 20px 0;">
-        You are not logged in. Please <a href="/" style="color: #00b7eb; text-decoration: underline;">log in</a> to continue.
+        You are not logged in. Please <a href="/login.html" style="color: #00b7eb; text-decoration: underline;">log in</a> to continue.
       </p>
     `;
     return;
@@ -361,18 +388,22 @@ document.addEventListener('DOMContentLoaded', async () => {
   greeting.textContent = `Hello, ${user.username}`;
   streak.textContent = `Streak: ${user.streak || 0} days`;
   liveRanking.textContent = await getLiveRanking(user, users);
+  updateDashboard();
+  renderQuests();
+
+  // Update timer every second
+  setInterval(updateTimerDisplay, 1000);
+});
+
+// Helper function to update dashboard stats
+function updateDashboard() {
+  const rank = getRank(xp);
   xpText.textContent = `${xp} / 100000 XP`;
   xpProgress.style.width = `${(xp / 100000) * 100}%`;
   dailyGoal.textContent = 'Daily Goal: 500 XP';
-  dailyProgress.textContent = '0 XP';
-  dailyReward.textContent = '0 XP';
+  dailyProgress.textContent = `${Math.min(xp, 500)} XP`;
+  dailyReward.textContent = xp >= 500 ? '50 Coins' : '0 Coins';
   weeklyGoal.textContent = 'Weekly Goal: 2000 XP';
-  weeklyProgress.textContent = '0 XP';
-  weeklyReward.textContent = '0 XP';
-  renderQuests();
-
-  // Update timer every second without full re-render
-  setInterval(() => {
-    updateTimerDisplay();
-  }, 1000);
-});
+  weeklyProgress.textContent = `${Math.min(xp, 2000)} XP`;
+  weeklyReward.textContent = xp >= 2000 ? '200 Coins' : '0 Coins';
+}
