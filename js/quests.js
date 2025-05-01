@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
-  // DOM Elements
+  // DOM Elements (unchanged)
   const dashboard = document.getElementById('dashboard');
   const questList = document.getElementById('quest-list');
   const addQuestBtn = document.getElementById('add-quest');
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const weeklyProgress = document.getElementById('weekly-progress');
   const weeklyReward = document.getElementById('weekly-reward');
 
-  // Validate DOM elements
+  // Validate DOM elements (unchanged)
   const requiredElements = {
     dashboard, questList, addQuestBtn, modal, closeModalBtn, saveQuestBtn,
     newQuestName, newQuestCategory, newQuestMinutes, searchBar, greeting,
@@ -62,13 +62,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     return rankThresholds.find(r => xp < (rankThresholds[rankThresholds.length - 1].xp || Infinity) && xp >= r.xp) || rankThresholds[0];
   }
 
-  // Fetch user with retry logic
+  // Fetch user with retry logic (unchanged)
   async function fetchUser(maxRetries = 3, delay = 1000) {
     for (let attempt = 1; attempt <= maxRetries; attempt++) {
       try {
-        const sessionResponse = await fetch('/api/get-session-username', {
-          credentials: 'include' // Ensure cookies are sent
-        });
+        const sessionResponse = await fetch('/api/get-session-username', { credentials: 'include' });
         if (!sessionResponse.ok) {
           const errorData = await sessionResponse.json();
           throw new Error(errorData.error || `Failed to fetch session (Attempt ${attempt})`);
@@ -76,9 +74,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const { username } = await sessionResponse.json();
         if (!username) throw new Error('No username in session');
 
-        const userResponse = await fetch('/js/json/user.json', {
-          credentials: 'include'
-        });
+        const userResponse = await fetch('/js/json/user.json', { credentials: 'include' });
         if (!userResponse.ok) throw new Error('Failed to fetch user data');
         const data = await userResponse.json();
         const userData = data[username];
@@ -96,7 +92,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  // Fetch quests with fallback
+  // Fetch quests (unchanged)
   async function fetchQuests() {
     if (!user || !user.username) {
       console.error('Cannot fetch quests: User not initialized');
@@ -119,7 +115,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  // Save quests
+  // Save quests (unchanged)
   async function saveQuests(questsData) {
     if (!user || !user.username) {
       console.error('Cannot save quests: User not initialized');
@@ -146,7 +142,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  // Save user data
+  // Save user data (unchanged)
   async function saveUserData(userData) {
     if (!user || !user.username) return;
     try {
@@ -167,7 +163,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  // Fetch leaderboard data
+  // Fetch leaderboard data (unchanged)
   async function fetchUsersFromData() {
     try {
       const response = await fetch('/js/json/data.json', { credentials: 'include' });
@@ -180,14 +176,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  // Get live ranking
+  // Get live ranking (unchanged)
   async function getLiveRanking(user, allUsers) {
     const sortedUsers = Array.isArray(allUsers) ? allUsers.map(u => ({ ...u, xp: u.xp || 0 })).sort((a, b) => b.xp - a.xp) : [];
     const rank = sortedUsers.findIndex(u => u.username === user.username) + 1;
     return rank > 0 ? `Live Rank: #${rank}` : 'Live Rank: #1';
   }
 
-  // Toast notification
+  // Toast notification (unchanged)
   function showToast(message) {
     toast.textContent = message;
     toast.classList.remove('hidden');
@@ -211,7 +207,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           showToast(`Rank Up! You're now ${rank.rank} - ${rank.badge} unlocked!`);
         }
         saveQuests(quests).then(() => saveUserData(user));
-        updateDashboard();
+        updateDashboard(quest); // Pass the completed quest
       }
       return 'Completed';
     }
@@ -222,10 +218,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Update timer display
   function updateTimerDisplay() {
+    console.log('Updating timer display...'); // Debug log
     const timers = questList.querySelectorAll('.quest-timer');
     quests.forEach((quest, index) => {
       if (quest.timerEnd && !quest.completed) {
         const remaining = new Date(quest.timerEnd) - new Date();
+        console.log(`Quest: ${quest.name}, Remaining: ${remaining}ms`); // Debug log
         if (remaining <= 0) {
           if (!quest.completed) {
             quest.completed = true;
@@ -239,27 +237,42 @@ document.addEventListener('DOMContentLoaded', async () => {
               showToast(`Rank Up! You're now ${rank.rank} - ${rank.badge} unlocked!`);
             }
             saveQuests(quests).then(() => saveUserData(user));
-            updateDashboard();
+            updateDashboard(quest); // Pass the completed quest
           }
-          timers[index].textContent = 'Completed';
+          if (timers[index]) {
+            timers[index].textContent = 'Completed';
+          }
         } else {
           const minutes = Math.floor(remaining / 60000);
           const seconds = Math.floor((remaining % 60000) / 1000);
-          timers[index].textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+          if (timers[index]) {
+            timers[index].textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+          }
         }
       }
     });
   }
 
-  // Update dashboard stats
-  function updateDashboard() {
+  // Update dashboard stats with quest parameter
+  function updateDashboard(completedQuest = null) {
+    console.log('Updating dashboard, XP:', xp); // Debug log
+    const rank = getRank(xp);
     xpText.textContent = `${xp} / 100000 XP`;
     xpProgress.style.width = `${(xp / 100000) * 100}%`;
-    showToast(`Quest Completed! +${quest.xp} XP`);
+    dailyGoal.textContent = 'Daily Goal: 500 XP';
+    dailyProgress.textContent = `${Math.min(xp, 500)} XP`;
+    dailyReward.textContent = xp >= 500 ? '50 Coins' : '0 Coins';
+    weeklyGoal.textContent = 'Weekly Goal: 2000 XP';
+    weeklyProgress.textContent = `${Math.min(xp, 2000)} XP`;
+    weeklyReward.textContent = xp >= 2000 ? '200 Coins' : '0 Coins';
+    if (completedQuest && completedQuest.xp) {
+      showToast(`Quest Completed! +${completedQuest.xp} XP`);
+    }
   }
 
   // Render quests
   function renderQuests() {
+    console.log('Rendering quests:', quests); // Debug log
     questList.innerHTML = '';
     const filteredQuests = quests.filter(q => q.name.toLowerCase().includes(searchBar.value.toLowerCase()));
     filteredQuests.forEach(quest => {
@@ -300,7 +313,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     showToast('Quest deleted');
   }
 
-  // Event Listeners
+  // Event Listeners (unchanged)
   addQuestBtn.addEventListener('click', () => {
     if (!user) {
       showToast('Please log in to add quests.');
@@ -388,22 +401,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   greeting.textContent = `Hello, ${user.username}`;
   streak.textContent = `Streak: ${user.streak || 0} days`;
   liveRanking.textContent = await getLiveRanking(user, users);
-  updateDashboard();
+  updateDashboard(); // Initial dashboard update without quest
   renderQuests();
 
   // Update timer every second
   setInterval(updateTimerDisplay, 1000);
 });
-
-// Helper function to update dashboard stats
-function updateDashboard() {
-  const rank = getRank(xp);
-  xpText.textContent = `${xp} / 100000 XP`;
-  xpProgress.style.width = `${(xp / 100000) * 100}%`;
-  dailyGoal.textContent = 'Daily Goal: 500 XP';
-  dailyProgress.textContent = `${Math.min(xp, 500)} XP`;
-  dailyReward.textContent = xp >= 500 ? '50 Coins' : '0 Coins';
-  weeklyGoal.textContent = 'Weekly Goal: 2000 XP';
-  weeklyProgress.textContent = `${Math.min(xp, 2000)} XP`;
-  weeklyReward.textContent = xp >= 2000 ? '200 Coins' : '0 Coins';
-}

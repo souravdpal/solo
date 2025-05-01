@@ -285,3 +285,84 @@ body {
 .flag {
   display: inline-block;
 }
+
+/* Media Queries for Responsiveness */
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .profile-card {
+    padding: 15px;
+  }
+
+  .profile-header h2 {
+    font-size: 20px;
+  }
+
+  .profile-header p {
+    font-size: 14px;
+  }
+
+  .xp-bar {
+    height: 10px;
+  }
+
+  .xp-progress {
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+  }
+}
+
+/* Tablet devices */
+@media (max-width: 1024px) {
+  .profile-container {
+    padding: 25px;
+    max-width: 90%;
+  }
+
+  .title {
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+
+  .button-group {
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .btn {
+    padding: 10px 22px;
+    font-size: 13px;
+  }
+
+  .profile-card {
+    padding: 18px;
+  }
+
+  .profile-header h2 {
+    font-size: 22px;
+  }
+
+  .profile-header p {
+    font-size: 15px;
+  }
+}

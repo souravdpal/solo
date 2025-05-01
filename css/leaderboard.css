@@ -173,6 +173,7 @@ body {
   margin-left: 10px;
   font-size: 20px;
 }
+
 .skills-card .upgrade-btn {
   background: #00b7eb;
   color: #fff;
@@ -186,10 +187,12 @@ body {
 .skills-card .upgrade-btn:hover {
   background: #00d4ff;
 }
+
 .shop-card .buy-btn:disabled {
   background: #666;
   cursor: not-allowed;
 }
+
 .skills-card .unlock-btn {
   background: #ffd700;
   color: #000;
@@ -208,6 +211,7 @@ body {
   background: #666;
   cursor: not-allowed;
 }
+
 .team-card .remove-btn {
   background: #ff4d4d;
   color: #fff;
@@ -227,4 +231,75 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .leaderboard-container {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .leaderboard-card h2 {
+    font-size: 20px;
+  }
+
+  .leaderboard-list li {
+    font-size: 14px;
+  }
+
+  .skills-card .upgrade-btn,
+  .skills-card .unlock-btn,
+  .team-card .remove-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .leaderboard-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .btn {
+    font-size: 10px;
+    padding: 8px 16px;
+  }
+
+  .leaderboard-card h2 {
+    font-size: 18px;
+  }
+
+  .leaderboard-list li {
+    font-size: 12px;
+  }
+
+  .skills-card .upgrade-btn,
+  .skills-card .unlock-btn,
+  .team-card .remove-btn {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
 }
