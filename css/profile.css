@@ -275,3 +275,13 @@ body {
   50% { opacity: 1; }
   100% { opacity: 0.6; }
 }
+.friends ul {
+  list-style-type: none;
+  padding: 0;
+}
+.friends li {
+  padding: 5px 0;
+}
+.flag {
+  display: inline-block;
+}

@@ -1,142 +1,160 @@
-document.addEventListener('DOMContentLoaded', async () => {
-  const usernameEl = document.getElementById('username');
-  const nameEl = document.getElementById('name');
+document.addEventListener('DOMContentLoaded', () => {
+  const usernameDisplay = document.getElementById('username');
+  const nameDisplay = document.getElementById('name');
+  const rankDisplay = document.getElementById('rank');
+  const xpDisplay = document.getElementById('xp');
+  const countryDisplay = document.getElementById('country');
+  const coinsDisplay = document.getElementById('coins');
+  const xpProgress = document.getElementById('xp-progress');
+  const inventoryList = document.getElementById('inventory-list');
+  const friendsDisplay = document.getElementById('friends');
   const nameInput = document.getElementById('name-input');
   const setNameBtn = document.getElementById('set-name-btn');
-  const rankEl = document.getElementById('rank');
-  const xpEl = document.getElementById('xp');
-  const countryEl = document.getElementById('country');
-  const coinsEl = document.getElementById('coins');
-  const inventoryListEl = document.getElementById('inventory-list');
-  const friendsEl = document.getElementById('friends');
-  const xpProgressEl = document.getElementById('xp-progress');
   const backToQuestsBtn = document.getElementById('back-to-quests');
   const logoutBtn = document.getElementById('logout-btn');
 
-  if (!usernameEl || !nameEl || !nameInput || !setNameBtn || !rankEl || !xpEl || !countryEl || !coinsEl ||
-      !inventoryListEl || !friendsEl || !xpProgressEl || !backToQuestsBtn || !logoutBtn) {
-    console.error('One or more required DOM elements are missing!');
-    return;
-  }
-
-  async function fetchUser() {
-    try {
-      const response = await fetch('/api/get-session-username');
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'Failed to fetch session username');
+  // Fetch username from session
+  fetch('/api/get-session-username')
+    .then(response => {
+      if (!response.ok) throw new Error('Failed to fetch session username');
+      return response.json();
+    })
+    .then(data => {
+      if (data.username) {
+        usernameDisplay.textContent = data.username;
+        loadUserData(data.username);
+      } else {
+        console.error('No user logged in:', data.error || 'Unknown error');
+        alert('Please log in to view your profile.');
+        window.location.href = '/login.html';
       }
-      const { username } = await response.json();
-      if (!username) throw new Error('No username found in session');
+    })
+    .catch(error => {
+      console.error('Error fetching username:', error.message);
+      alert('An error occurred while loading your profile. Please try again.');
+    });
 
-      const userResponse = await fetch('/js/json/user.json');
-      if (!userResponse.ok) throw new Error('Failed to fetch user data');
-      const data = await userResponse.json();
-      const userData = data[username];
-      if (!userData) throw new Error('User not found in user.json');
-      return userData;
-    } catch (error) {
-      console.error('Error fetching user:', error.message);
-      return null;
-    }
-  }
+  // Load user data from user.json
+  function loadUserData(username) {
+    fetch('/js/json/user.json')
+      .then(response => {
+        if (!response.ok) throw new Error('Failed to fetch user data');
+        return response.json();
+      })
+      .then(users => {
+        const user = users[username];
+        if (!user) {
+          console.warn('User data not found for:', username);
+          return;
+        }
 
-  async function saveUserData(userData) {
-    try {
-      const response = await fetch('/js/json/user.json');
-      if (!response.ok) throw new Error('Failed to fetch user.json');
-      const data = await response.json();
-      data[user.username] = userData;
-      const putResponse = await fetch('/js/json/user.json', {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        // Update stats
+        xpDisplay.textContent = `XP: ${user.xp}`;
+        rankDisplay.textContent = `Rank: ${user.rank || 'E-Rank'}`;
+        coinsDisplay.textContent = `Coins: ${user.coins}`;
+        nameDisplay.textContent = user.name ? `Name: ${user.name}` : 'Name: Not Set';
+        updateXPBar(user.xp);
+
+        // Update country with proper HTML rendering
+        const countryName = user.country || 'Unknown';
+        const flagEmoji = getFlagEmoji(countryName);
+        countryDisplay.innerHTML = ''; // Clear existing content
+        const countryText = document.createTextNode(`Country: ${countryName} `);
+        const flagSpan = document.createElement('span');
+        flagSpan.className = 'flag';
+        flagSpan.textContent = flagEmoji;
+        countryDisplay.appendChild(countryText);
+        countryDisplay.appendChild(flagSpan);
+
+        // Populate inventory
+        inventoryList.innerHTML = user.inventory
+          ? user.inventory.map(item => `<li>${item}</li>`).join('')
+          : '<li>No items</li>';
+
+        // Populate friends from team array
+        const team = user.team || [];
+        if (team.length === 0) {
+          friendsDisplay.innerHTML = '<p>No friends in team.</p>';
+        } else {
+          friendsDisplay.innerHTML = '<ul>' + team
+            .map(friend => `<li>${friend}</li>`)
+            .join('') + '</ul>';
+        }
+      })
+      .catch(error => {
+        console.error('Error loading user data:', error.message);
+        xpDisplay.textContent = 'XP: Error';
+        countryDisplay.textContent = 'Country: Error';
+        coinsDisplay.textContent = 'Coins: Error';
+        friendsDisplay.textContent = 'Friends: Error loading data.';
       });
-      if (!putResponse.ok) throw new Error('Failed to save user data');
-      console.log('User data saved successfully');
-    } catch (error) {
-      console.error('Error saving user data:', error.message);
-    }
   }
 
-  // Country code to flag emoji mapping
-  const countryToFlag = {
-    'united states': '🇺🇸',
-    'india': '🇮🇳',
-    'united kingdom': '🇬🇧',
-    'japan': '🇯🇵',
-    'south korea': '🇰🇷',
-    'china': '🇨🇳',
-    'france': '🇫🇷',
-    'germany': '🇩🇪',
-    'canada': '🇨🇦',
-    'australia': '🇦🇺'
-  };
-
-  // Capitalize country name
-  function capitalizeCountry(country) {
-    return country.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  // Update XP progress bar
+  function updateXPBar(xp) {
+    const maxXP = 1000; // Adjust max XP as per your rank system
+    const progress = Math.min((xp / maxXP) * 100, 100);
+    xpProgress.style.width = `${progress}%`;
+    if (xp >= 243) xpProgress.style.backgroundColor = '#4caf50'; // Green for progress
   }
 
-  // Initialize profile
-  const user = await fetchUser();
-  if (!user) {
-    document.getElementById('profile-container').innerHTML = `
-      <h1 class="title">Hunter Profile <span>⚡</span></h1>
-      <p style="color: #ff4d4d; font-size: 16px; margin: 20px 0;">
-        You are not logged in. Please <a href="/" style="color: #00b7eb; text-decoration: underline;">log in</a> to continue.
-      </p>
-    `;
-    return;
+  // Get flag emoji based on country name
+  function getFlagEmoji(country) {
+    const countryFlags = {
+      'united states': '🇺🇸',
+      'india': '🇮🇳',
+      'united kingdom': '🇬🇧',
+      'japan': '🇯🇵',
+      'south korea': '🇰🇷',
+      'china': '🇨🇳',
+      'france': '🇫🇷',
+      'germany': '🇩🇪',
+      'canada': '🇨🇦',
+      'australia': '🇦🇺'
+    };
+    return countryFlags[country.toLowerCase()] || '🌍';
   }
-
-  // Display user data
-  usernameEl.textContent = user.username;
-  nameEl.textContent = `Name: ${user.displayName || 'Not Set'}`;
-  rankEl.textContent = `Rank: ${user.rank || 'E-Rank'}`;
-  xpEl.textContent = `XP: ${user.xp || 0}`;
-  const countryName = user.country.toLowerCase();
-  const flag = countryToFlag[countryName] || '🌍';
-  countryEl.innerHTML = `Country: <span class="flag">${flag}</span> ${capitalizeCountry(countryName)}`;
-  coinsEl.textContent = `Coins: ${user.coins || 0}`;
-  inventoryListEl.innerHTML = user.inventory && user.inventory.length > 0
-    ? user.inventory.map(item => `<li>${item}</li>`).join('')
-    : '<li>No items</li>';
-  friendsEl.textContent = 'Coming Soon...';
-  xpProgressEl.style.width = `${(user.xp || 0) / 100000 * 100}%`;
 
   // Set display name
-  setNameBtn.addEventListener('click', async () => {
+  setNameBtn.addEventListener('click', () => {
     const newName = nameInput.value.trim();
-    if (!newName) {
-      alert('Please enter a display name');
-      return;
+    if (newName && newName.length <= 20) {
+      fetch('/js/json/user.json')
+        .then(response => response.json())
+        .then(users => {
+          const username = usernameDisplay.textContent;
+          if (users[username]) {
+            users[username].name = newName;
+            return fetch('/js/json/user.json', {
+              method: 'PUT',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(users)
+            });
+          }
+        })
+        .then(response => {
+          if (response.ok) {
+            nameDisplay.textContent = `Name: ${newName}`;
+            nameInput.value = '';
+          } else {
+            throw new Error('Failed to update name');
+          }
+        })
+        .catch(error => console.error('Error setting name:', error.message));
+    } else {
+      alert('Name must be 20 characters or less and cannot be empty.');
     }
-    if (newName.length > 20) {
-      alert('Display name must be 20 characters or less');
-      return;
-    }
-    user.displayName = newName;
-    await saveUserData(user);
-    nameEl.textContent = `Name: ${user.displayName}`;
-    nameInput.value = '';
   });
 
-  // Event listeners for navigation
+  // Back to quests button
   backToQuestsBtn.addEventListener('click', () => {
     window.location.href = '/quests.html';
   });
 
-  logoutBtn.addEventListener('click', async () => {
-    try {
-      const response = await fetch('/logout');
-      if (response.ok) {
-        window.location.href = '/';
-      } else {
-        throw new Error('Logout failed');
-      }
-    } catch (error) {
-      console.error('Error logging out:', error.message);
-    }
+  // Logout button
+  logoutBtn.addEventListener('click', () => {
+    fetch('/logout', { method: 'GET' })
+      .then(() => window.location.href = '/login.html')
+      .catch(error => console.error('Error logging out:', error.message));
   });
 });

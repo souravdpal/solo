@@ -3092,7 +3092,10 @@
     "achievements": [],
     "coins": 148,
     "skin": "default",
-    "team": [],
+    "team": [
+      "Sourav",
+      "Diya"
+    ],
     "displayName": "rishu"
   }
 }
