@@ -54,8 +54,8 @@ app.use(session({
   cookie: {
     secure: isProduction, // True for HTTPS on Render, false for local HTTP
     httpOnly: true,
-    maxAge: 24 * 60 * 60 * 1000 // 24 hours
-    // sameSite: 'lax' // Uncomment to prevent CSRF if needed
+    maxAge: 24 * 60 * 60 * 1000, // 24 hours
+    sameSite: 'lax' // Prevent CSRF
   }
 }));
 
@@ -67,6 +67,17 @@ app.use('/css', express.static(path.join(__dirname, 'css')));
 // Initialize JSON files if they don't exist
 const userFilePath = path.join(__dirname, 'js/json/user.json');
 const notifFilePath = path.join(__dirname, 'js/json/notifications.json');
+const taskFilePath = path.join(__dirname, 'js/json/task.json');
+const dataFilePath = path.join(__dirname, 'js/json/data.json');
+
+// Ensure directories exist
+const jsonDir = path.join(__dirname, 'js/json');
+if (!fs.existsSync(jsonDir)) {
+  fs.mkdirSync(jsonDir, { recursive: true });
+  console.log('Created js/json directory');
+}
+
+// Initialize files
 if (!fs.existsSync(userFilePath)) {
   fs.writeFileSync(userFilePath, JSON.stringify({}, null, 2), 'utf8');
   console.log('Initialized user.json');
@@ -75,10 +86,22 @@ if (!fs.existsSync(notifFilePath)) {
   fs.writeFileSync(notifFilePath, JSON.stringify({ notifications: [] }, null, 2), 'utf8');
   console.log('Initialized notifications.json');
 }
+if (!fs.existsSync(taskFilePath)) {
+  fs.writeFileSync(taskFilePath, JSON.stringify({}, null, 2), 'utf8');
+  console.log('Initialized task.json');
+}
+if (!fs.existsSync(dataFilePath)) {
+  fs.writeFileSync(dataFilePath, JSON.stringify({ leaderboard: [] }, null, 2), 'utf8');
+  console.log('Initialized data.json');
+}
 
 // Define requireAuth middleware
 const requireAuth = (req, res, next) => {
-  console.log('Checking auth for:', req.path, 'Session:', req.session);
+  console.log('Checking auth for:', req.path, 'Session:', {
+    authorized: req.session.authorized,
+    username: req.session.username,
+    sessionId: req.session.id
+  });
   if (req.session.authorized && req.session.username) {
     next();
   } else {
@@ -101,7 +124,11 @@ app.get('/skills.html', requireAuth, (req, res) => res.sendFile(path.join(__dirn
 
 // Get session username
 app.get('/api/get-session-username', (req, res) => {
-  console.log('Session check:', req.session);
+  console.log('Session check:', {
+    sessionId: req.session.id,
+    username: req.session.username,
+    authorized: req.session.authorized
+  });
   if (req.session.username) {
     res.json({ username: req.session.username });
   } else {
@@ -114,7 +141,6 @@ const hashSHA256 = (password) => crypto.createHash('sha256').update(password).di
 
 app.post('/register', (req, res) => {
   const { username, password, country } = req.body;
-  const userFilePath = path.join(__dirname, 'js/json/user.json');
 
   if (!username || !password || !country) {
     return res.status(400).json({ error: 'All fields are required' });
@@ -150,7 +176,11 @@ app.post('/register', (req, res) => {
       }
       req.session.username = username;
       req.session.authorized = true;
-      console.log('Session after register:', req.session);
+      console.log('Session after register:', {
+        sessionId: req.session.id,
+        username: req.session.username,
+        authorized: req.session.authorized
+      });
       res.json({ success: true });
     });
   });
@@ -158,7 +188,6 @@ app.post('/register', (req, res) => {
 
 app.post('/signup-emoji', (req, res) => {
   const { username, password, country } = req.body;
-  const userFilePath = path.join(__dirname, 'js/json/user.json');
 
   if (!username || !password || !country) {
     return res.status(400).json({ error: 'All fields are required' });
@@ -201,7 +230,11 @@ app.post('/signup-emoji', (req, res) => {
       }
       req.session.username = username;
       req.session.authorized = true;
-      console.log('Session after signup:', req.session);
+      console.log('Session after signup:', {
+        sessionId: req.session.id,
+        username: req.session.username,
+        authorized: req.session.authorized
+      });
       res.json({ success: true });
     });
   });
@@ -209,7 +242,6 @@ app.post('/signup-emoji', (req, res) => {
 
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
-  const userFilePath = path.join(__dirname, 'js/json/user.json');
 
   if (!username || !password) {
     return res.status(400).json({ error: 'Username and password are required' });
@@ -241,7 +273,11 @@ app.post('/login', (req, res) => {
     }
     req.session.username = username;
     req.session.authorized = true;
-    console.log('Session after login:', req.session);
+    console.log('Session after login:', {
+      sessionId: req.session.id,
+      username: req.session.username,
+      authorized: req.session.authorized
+    });
     res.json({ success: true });
   });
 });
