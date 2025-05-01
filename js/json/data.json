@@ -131,15 +131,12 @@
       "xp": 0,
       "country": "united kingdom",
       "coins": 100
+    },
+    {
+      "username": "testuser",
+      "xp": 0,
+      "country": "india",
+      "coins": 100
     }
-  ],
-  "india": [
-    "dev",
-    "riya",
-    "nodejs..__++=893",
-    "diya"
-  ],
-  "tonga": [
-    "Barline"
   ]
 }

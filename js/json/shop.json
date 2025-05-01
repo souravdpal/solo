@@ -1,6 +1,239 @@
 {
-    "items": [
-      { "id": 1, "name": "Double XP Boost", "cost": 50, "effect": "doubleXP", "duration": 3600000 },
-      { "id": 2, "name": "Neon Skin", "cost": 100, "effect": "cosmetic", "skin": "neon" }
-    ]
-  }
+  "products": [
+    {
+      "name": "XP Booster",
+      "description": "Doubles your XP gain for 1 hour.",
+      "cost": 50
+    },
+    {
+      "name": "Coin Magnet",
+      "description": "Increases coin drops by 30% for 24 hours.",
+      "cost": 100
+    },
+    {
+      "name": "Energy Drink",
+      "description": "Restores energy instantly.",
+      "cost": 20
+    },
+    {
+      "name": "Time Freeze",
+      "description": "Pause countdown timers for 15 minutes.",
+      "cost": 150
+    },
+    {
+      "name": "Focus Scroll",
+      "description": "Boosts focus by 200% for 30 minutes.",
+      "cost": 80
+    },
+    {
+      "name": "Stat Reset",
+      "description": "Reset your stats and reallocate points.",
+      "cost": 250
+    },
+    {
+      "name": "AGI Potion",
+      "description": "Boosts AGI by 5 points.",
+      "cost": 60
+    },
+    {
+      "name": "INT Potion",
+      "description": "Boosts INT by 5 points.",
+      "cost": 60
+    },
+    {
+      "name": "STR Potion",
+      "description": "Boosts STR by 5 points.",
+      "cost": 60
+    },
+    {
+      "name": "Daily Streak Shield",
+      "description": "Prevents your daily streak from breaking.",
+      "cost": 120
+    },
+    {
+      "name": "Memory Capsule",
+      "description": "Temporarily enhances memory retention.",
+      "cost": 90
+    },
+    {
+      "name": "Wisdom Tome",
+      "description": "Adds 100 XP to study quests.",
+      "cost": 70
+    },
+    {
+      "name": "Training Belt",
+      "description": "Doubles XP earned from physical tasks.",
+      "cost": 90
+    },
+    {
+      "name": "Quantum Chip",
+      "description": "Unlocks a secret coding quest.",
+      "cost": 200
+    },
+    {
+      "name": "Celestial Stone",
+      "description": "Decorative item that increases motivation.",
+      "cost": 40
+    },
+    {
+      "name": "Sleep Enhancer",
+      "description": "Improves sleep tracking efficiency.",
+      "cost": 110
+    },
+    {
+      "name": "Distraction Shield",
+      "description": "Blocks distraction XP loss for a day.",
+      "cost": 130
+    },
+    {
+      "name": "Background Music Pack",
+      "description": "Play lo-fi or ambient music in background.",
+      "cost": 30
+    },
+    {
+      "name": "Solo Leveling Skin",
+      "description": "Apply a Solo Leveling theme to UI.",
+      "cost": 300
+    },
+    {
+      "name": "Mystic Artifact",
+      "description": "Rare collectable for elite users.",
+      "cost": 500
+    },
+    {
+      "name": "Streak Boost",
+      "description": "Add +1 to your current streak.",
+      "cost": 70
+    },
+    {
+      "name": "Instant XP +500",
+      "description": "Adds 500 XP to your level progress.",
+      "cost": 150
+    },
+    {
+      "name": "Focus Room Ticket",
+      "description": "Access to distraction-free UI for 2 hours.",
+      "cost": 85
+    },
+    {
+      "name": "Meditation Bell",
+      "description": "Unlock a guided meditation mode.",
+      "cost": 55
+    },
+    {
+      "name": "RPG Theme Pack",
+      "description": "Changes app visuals to RPG style.",
+      "cost": 275
+    },
+    {
+      "name": "Minimal Mode",
+      "description": "Hides non-essential UI elements.",
+      "cost": 35
+    },
+    {
+      "name": "Time Crystal",
+      "description": "Gain extra time tokens for quests.",
+      "cost": 140
+    },
+    {
+      "name": "Teleport Scroll",
+      "description": "Skip to next level with full XP.",
+      "cost": 350
+    },
+    {
+      "name": "Motivation Quote Pack",
+      "description": "Get a new inspiring anime quote daily.",
+      "cost": 45
+    },
+    {
+      "name": "Aura Glow",
+      "description": "Visual glow effect around your avatar.",
+      "cost": 65
+    },
+    {
+      "name": "Power Mode",
+      "description": "Temporarily unlocks all features for 1 day.",
+      "cost": 500
+    },
+    {
+      "name": "Night Owl Boost",
+      "description": "Boost productivity at night hours.",
+      "cost": 90
+    },
+    {
+      "name": "Sunrise Boost",
+      "description": "Extra XP for early morning tasks.",
+      "cost": 90
+    },
+    {
+      "name": "No-Distraction Cape",
+      "description": "Protects from distraction XP loss 3x.",
+      "cost": 250
+    },
+    {
+      "name": "Hardcore Mode Key",
+      "description": "Unlocks a challenge-only mode.",
+      "cost": 200
+    },
+    {
+      "name": "Digital Notebook",
+      "description": "Add personal notes/tasks with reminders.",
+      "cost": 75
+    },
+    {
+      "name": "Checklist Powerup",
+      "description": "Adds bonuses for completing all daily tasks.",
+      "cost": 95
+    },
+    {
+      "name": "Zen Garden",
+      "description": "Virtual relaxing garden environment.",
+      "cost": 60
+    },
+    {
+      "name": "Time Tracker Pro",
+      "description": "Unlock detailed time analytics.",
+      "cost": 220
+    },
+    {
+      "name": "Streak Revival",
+      "description": "Revive a broken streak (1 time only).",
+      "cost": 150
+    },
+    {
+      "name": "Gold Frame",
+      "description": "Rare badge to flex your focus streak.",
+      "cost": 180
+    },
+    {
+      "name": "Teleport Scroll",
+      "description": "Skip a task and still earn XP.",
+      "cost": 170
+    },
+    {
+      "name": "Inventory Upgrade",
+      "description": "Hold more power-ups at once.",
+      "cost": 130
+    },
+    {
+      "name": "Random Reward Crate",
+      "description": "Get a surprise power-up!",
+      "cost": 90
+    },
+    {
+      "name": "Achievement Tracker",
+      "description": "Visualize progress milestones.",
+      "cost": 115
+    },
+    {
+      "name": "Productivity Wallpaper",
+      "description": "Stylized backgrounds for inspiration.",
+      "cost": 25
+    },
+    {
+      "name": "Weekly Bonus Pack",
+      "description": "Get coins + XP for staying active.",
+      "cost": 200
+    }
+  ]
+}

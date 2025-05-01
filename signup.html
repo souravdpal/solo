@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-  <link rel="icon" href="assets/images/solo.png" type="image/svg+xml">
-
-    <link rel="icon" href="/favicon.png" type="image/svg+xml">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>redirecting!</title>
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solo Leveling - Sign Up</title>
+  <link rel="stylesheet" href="/css/signup-emoji.css">
+  <link rel="icon" type="image/x-icon" href="/assets/images/solo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-   <script>window.location.href = 'signup-emoji.html';</script>
-   <noscript>Please enable JavaScript to proceed.</noscript>    
-   <script>
-        // Redirect to signup-emoji.html if JavaScript is enabled
-        if (document.readyState === 'complete') {
-            window.location.href = 'signup-emoji.html';
-        } else {
-            document.addEventListener('DOMContentLoaded', function() {
-                window.location.href = 'signup-emoji.html';
-            });
-        }
-   </script> 
+  <div class="signup-container">
+    <h1 class="title">SIGN UP <span>🌟</span></h1>
+    <form id="signup-form" method="POST" action="/signup-emoji">
+      <input type="text" id="username" name="username" placeholder="Username" required>
+      <input type="password" id="password" name="password" placeholder="Password (min 6 chars)" required minlength="6">
+      <select id="country" name="country" required>
+        <option value="" disabled selected>Select your country</option>
+        <option value="🇺🇸">🇺🇸 United States</option>
+        <option value="🇮🇳">🇮🇳 India</option>
+        <option value="🇬🇧">🇬🇧 United Kingdom</option>
+        <option value="🇯🇵">🇯🇵 Japan</option>
+        <option value="🇰🇷">🇰🇷 South Korea</option>
+        <option value="🇨🇳">🇨🇳 China</option>
+        <option value="🇫🇷">🇫🇷 France</option>
+        <option value="🇩🇪">🇩🇪 Germany</option>
+        <option value="🇨🇦">🇨🇦 Canada</option>
+        <option value="🇦🇺">🇦🇺 Australia</option>
+      </select>
+      <button type="submit" class="btn">SIGN UP</button>
+    </form>
+    <p>Already have an account? <a href="/login.html">Log In</a></p>
+  </div>
+  <script src="/js/signup-emoji.js"></script>
 </body>
 </html>

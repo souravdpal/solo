@@ -1,30 +1,11 @@
 {
-  "saurav": [
-    {
-      "id": 1,
-      "message": "You completed the daily quest!",
-      "timestamp": "2025-04-29T10:30:00Z",
-      "read": false
-    },
-    {
-      "id": 2,
-      "message": "Level up! You're now Level 5.",
-      "timestamp": "2025-04-28T17:45:00Z",
-      "read": true
-    }
-  ],
-  "riya": [
-    {
-      "id": 1,
-      "message": "New motivational quote added.",
-      "timestamp": "2025-04-29T08:00:00Z",
-      "read": false
-    },
-    {
-      "id": 2,
-      "message": "You missed a task yesterday!",
-      "timestamp": "2025-04-28T20:15:00Z",
-      "read": false
-    }
+  "notifications": [
+    "Welcome to Solo Leveling! Start your journey now.",
+    "Server maintenance scheduled for May 2, 2025.",
+    "New event: Global Hunt begins tomorrow!",
+    "user there are many chnages having in servers lately that's why we are somtime have shutdown of server and besides somtime data forgots your user is and pass",
+    "so make same id if its forgot we are trying to resolve this issue as soon as possible",
+    "New feature: Daily login rewards added.",
+    "Bug fix: Timer issue resolved."
   ]
 }

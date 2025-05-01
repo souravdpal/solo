@@ -2,35 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" href="assets/images/solo.png" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solo Leveling Dashboard - Battle</title>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/battle.css">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <title>Solo Leveling - Battle</title>
+  <link rel="stylesheet" href="/css/battle.css">
+  <link rel="icon" type="image/x-icon" href="/assets/images/solo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <h1 class="title">Solo Leveling - Battle</h1>
-    <div id="battle-display"></div>
-    <div id="monster-options"></div>
-    <button id="fight-btn" class="btn" disabled>Fight</button>
-    <div id="defeated-monsters"></div>
-    <div class="nav-links">
-      <a href="login.html" class="nav-link">Login</a> |
-      <a href="signup.html" class="nav-link">Sign Up</a> |
-      <a href="index.html" class="nav-link">Home</a> |
-      <a href="leaderboard.html" class="nav-link">Leaderboard</a> |
-      <a href="team.html" class="nav-link">Team</a> |
-      <a href="quests.html" class="nav-link">Quests</a> |
-      <a href="shop.html" class="nav-link">Shop</a> |
-      <a href="profile.html" class="nav-link">Profile</a> |
-      <a href="skills.html" class="nav-link">Skills</a> |
-      <a href="notifications.html" class="nav-link">Notifications</a>
+  <div class="battle-container">
+    <h1 class="title">BATTLE <span>⚔️</span></h1>
+    <div id="user-stats" class="stats">
+      <p><strong>Username:</strong> <span id="username"></span></p>
+      <p><strong>XP:</strong> <span id="xp">0</span></p>
+      <p><strong>Rank:</strong> <span id="rank">E-Rank</span></p>
+      <p><strong>Coins:</strong> <span id="coins">100</span></p>
     </div>
+    <button id="battle-btn" class="btn">Start Battle</button>
+    <div id="battle-result" class="result"></div>
   </div>
-  <script src="js/storage.js"></script>
-  <script src="js/battle.js"></script>
+  <script src="/js/battle.js"></script>
 </body>
 </html>

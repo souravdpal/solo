@@ -2,28 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" href="assets/images/solo.png" type="image/svg+xml">
-
-  <link rel="icon" href="/favicon.png" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Rise, Hunter</title>
+  <title>Solo Leveling - Login</title>
   <link rel="stylesheet" href="/css/login.css">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/x-icon" href="/assets/images/solo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <h1>Rise, Hunter ⚡</h1>
-    <div class="login-box">
-      <h2>Login</h2>
-      <form id="login-form">
-        <input type="text" id="username" placeholder="Username" required>
-        <input type="password" id="password" placeholder="Password" required>
-        <button  id = "sub" type="submit">Login</button>
-        <p id="error-message" class="hidden"></p>
-      </form>
-      <p>Don't have an account? <a href="/signup.html">Register</a></p>
-    </div>
+  <div class="dashboard-container">
+    <h1 class="title">LOGIN <span>🔑</span></h1>
+    <form id="login-form" method="POST" action="/login">
+      <input type="text" id="username" name="username" placeholder="Username" required>
+      <input type="password" id="password" name="password" placeholder="Password (min 6 chars)" required minlength="6">
+      <button type="submit" class="btn">LOGIN</button>
+    </form>
+    <p>Don't have an account? <a href="/signup.html">Sign Up</a></p>
   </div>
-  <script defer src="/js/login.js"></script>
+  <script src="/js/login.js"></script>
 </body>
 </html>

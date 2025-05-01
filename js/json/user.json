@@ -1,7 +1,7 @@
 {
   "Sourav": {
     "username": "Sourav",
-    "country": "india",
+    "country": "India",
     "password": "password",
     "xp": 1500000,
     "rank": "S-Rank",
@@ -16,213 +16,3083 @@
       "Sung Jin-woo"
     ]
   },
-  "Diya": {
-    "username": "Diya",
-    "country": "india",
-    "password": "diya",
-    "xp": 108810,
-    "rank": "S-Rank",
-    "inventory": [
-      "Novice Hunter"
-    ],
-    "achievements": [],
-    "coins": 100,
-    "skin": "default",
-    "team": []
-  },
-  "riya": {
-    "username": "riya",
-    "country": "india",
-    "password": "riya",
-    "xp": 0,
-    "rank": "E-Rank",
-    "inventory": [
-      "Novice Hunter"
-    ],
-    "achievements": [],
-    "coins": 100,
-    "skin": "default",
-    "displayName": "riya love"
-  },
-  "nodejs..__++=893": {
-    "username": "nodejs..__++=893",
-    "country": "india",
-    "password": "node",
-    "xp": 0,
-    "rank": "E-Rank",
-    "inventory": [
-      "Novice Hunter"
-    ],
-    "achievements": [],
-    "coins": 100,
-    "skin": "default"
-  },
-  "StormPulse": {
-    "username": "StormPulse",
-    "country": "usa",
-    "password": "pulse2025",
-    "xp": 950000,
-    "rank": "A-Rank",
-    "inventory": [
-      "Novice Hunter",
-      "Thunder Axe"
-    ],
-    "achievements": [
-      "First Kill"
-    ],
-    "coins": 400,
-    "skin": "default",
-    "team": [
-      "IronShade"
-    ]
-  },
-  "IronShade": {
-    "username": "IronShade",
-    "country": "brazil",
-    "password": "shade123",
-    "xp": 85000,
-    "rank": "C-Rank",
-    "inventory": [
-      "Novice Hunter",
-      "Iron Shield"
-    ],
-    "achievements": [],
-    "coins": 180,
-    "skin": "default",
-    "displayName": "Shade"
-  },
-  "MoonReaper": {
-    "username": "MoonReaper",
-    "country": "japan",
-    "password": "moonx",
+  "Sung Jin-woo": {
+    "username": "Sung Jin-woo",
+    "country": "South Korea",
+    "password": "shadow",
     "xp": 1200000,
     "rank": "S-Rank",
     "inventory": [
-      "Novice Hunter",
-      "Lunar Blade",
-      "Star Cloak"
+      "Shadow Monarch"
     ],
     "achievements": [
-      "Elite Hunter",
-      "Moonlight"
+      "Solo Leveling"
     ],
-    "coins": 500,
-    "skin": "phantom",
+    "coins": 200,
+    "skin": "black",
+    "team": [
+      "Sourav",
+      "Diya"
+    ]
+  },
+  "Diya": {
+    "username": "Diya",
+    "country": "India",
+    "password": "light",
+    "xp": 950000,
+    "rank": "A-Rank",
+    "inventory": [
+      "Healer Staff"
+    ],
+    "achievements": [
+      "Bright Support"
+    ],
+    "coins": 150,
+    "skin": "lightblue",
+    "team": [
+      "Sourav",
+      "Sung Jin-woo"
+    ]
+  },
+  "Cha Hae-In": {
+    "username": "Cha Hae-In",
+    "country": "South Korea",
+    "password": "sword",
+    "xp": 870000,
+    "rank": "A-Rank",
+    "inventory": [
+      "Swordmaster Blade"
+    ],
+    "achievements": [
+      "Silent Slash"
+    ],
+    "coins": 180,
+    "skin": "silver",
+    "team": [
+      "Sung Jin-woo"
+    ]
+  },
+  "Megan": {
+    "username": "Megan",
+    "country": "UK",
+    "password": "1234",
+    "xp": 413958,
+    "rank": "C-Rank",
+    "inventory": [
+      "Steel Armor",
+      "Ice Wand",
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 244,
+    "skin": "white",
     "team": []
   },
-  "SandViper": {
-    "username": "SandViper",
-    "country": "egypt",
-    "password": "viper9",
-    "xp": 45000,
-    "rank": "D-Rank",
+  "Katherine": {
+    "username": "Katherine",
+    "country": "Germany",
+    "password": "1234",
+    "xp": 621720,
+    "rank": "B-Rank",
     "inventory": [
-      "Novice Hunter"
+      "Healing Potion",
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 128,
+    "skin": "blue",
+    "team": []
+  },
+  "Robert": {
+    "username": "Robert",
+    "country": "USA",
+    "password": "1234",
+    "xp": 335213,
+    "rank": "B-Rank",
+    "inventory": [
+      "Magic Scroll",
+      "Steel Armor",
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 51,
+    "skin": "white",
+    "team": []
+  },
+  "Jonathan": {
+    "username": "Jonathan",
+    "country": "Nigeria",
+    "password": "1234",
+    "xp": 465262,
+    "rank": "B-Rank",
+    "inventory": [
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 244,
+    "skin": "silver",
+    "team": []
+  },
+  "William": {
+    "username": "William",
+    "country": "Brazil",
+    "password": "1234",
+    "xp": 556678,
+    "rank": "C-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Ice Wand",
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 0,
+    "skin": "silver",
+    "team": []
+  },
+  "Richard": {
+    "username": "Richard",
+    "country": "Germany",
+    "password": "1234",
+    "xp": 359317,
+    "rank": "B-Rank",
+    "inventory": [
+      "Ice Wand",
+      "Hunter Knife",
+      "Healing Potion"
+    ],
+    "achievements": [],
+    "coins": 290,
+    "skin": "green",
+    "team": []
+  },
+  "Kristen": {
+    "username": "Kristen",
+    "country": "Japan",
+    "password": "1234",
+    "xp": 260206,
+    "rank": "A-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 163,
+    "skin": "silver",
+    "team": []
+  },
+  "Kevin": {
+    "username": "Kevin",
+    "country": "Brazil",
+    "password": "1234",
+    "xp": 124355,
+    "rank": "B-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Mana Ring",
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 276,
+    "skin": "green",
+    "team": []
+  },
+  "Thomas": {
+    "username": "Thomas",
+    "country": "China",
+    "password": "1234",
+    "xp": 642485,
+    "rank": "B-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 197,
+    "skin": "white",
+    "team": []
+  },
+  "Brandy": {
+    "username": "Brandy",
+    "country": "Germany",
+    "password": "1234",
+    "xp": 613613,
+    "rank": "C-Rank",
+    "inventory": [
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 95,
+    "skin": "default",
+    "team": []
+  },
+  "Rebecca": {
+    "username": "Rebecca",
+    "country": "Brazil",
+    "password": "1234",
+    "xp": 652539,
+    "rank": "B-Rank",
+    "inventory": [
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 66,
+    "skin": "blue",
+    "team": []
+  },
+  "Juan": {
+    "username": "Juan",
+    "country": "USA",
+    "password": "1234",
+    "xp": 50518,
+    "rank": "A-Rank",
+    "inventory": [
+      "Flame Sword",
+      "Steel Armor",
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 141,
+    "skin": "green",
+    "team": []
+  },
+  "Katelyn": {
+    "username": "Katelyn",
+    "country": "Australia",
+    "password": "1234",
+    "xp": 235654,
+    "rank": "A-Rank",
+    "inventory": [
+      "Mana Ring",
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 230,
+    "skin": "silver",
+    "team": []
+  },
+  "Christine": {
+    "username": "Christine",
+    "country": "Nigeria",
+    "password": "1234",
+    "xp": 702317,
+    "rank": "C-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Steel Armor",
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 171,
+    "skin": "green",
+    "team": []
+  },
+  "John": {
+    "username": "John",
+    "country": "India",
+    "password": "1234",
+    "xp": 264841,
+    "rank": "B-Rank",
+    "inventory": [
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 112,
+    "skin": "white",
+    "team": []
+  },
+  "Renee": {
+    "username": "Renee",
+    "country": "Nigeria",
+    "password": "1234",
+    "xp": 188763,
+    "rank": "B-Rank",
+    "inventory": [
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 74,
+    "skin": "green",
+    "team": []
+  },
+  "Tonya": {
+    "username": "Tonya",
+    "country": "Australia",
+    "password": "1234",
+    "xp": 57431,
+    "rank": "B-Rank",
+    "inventory": [
+      "Mana Ring",
+      "Flame Sword",
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 13,
+    "skin": "red",
+    "team": []
+  },
+  "Lisa": {
+    "username": "Lisa",
+    "country": "Germany",
+    "password": "1234",
+    "xp": 675845,
+    "rank": "B-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Steel Armor",
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 189,
+    "skin": "red",
+    "team": []
+  },
+  "Rachel": {
+    "username": "Rachel",
+    "country": "Australia",
+    "password": "1234",
+    "xp": 48159,
+    "rank": "C-Rank",
+    "inventory": [
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 63,
+    "skin": "silver",
+    "team": []
+  },
+  "Kyle": {
+    "username": "Kyle",
+    "country": "India",
+    "password": "1234",
+    "xp": 230805,
+    "rank": "A-Rank",
+    "inventory": [
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 217,
+    "skin": "red",
+    "team": []
+  },
+  "Jessica": {
+    "username": "Jessica",
+    "country": "USA",
+    "password": "1234",
+    "xp": 282545,
+    "rank": "C-Rank",
+    "inventory": [
+      "Magic Scroll",
+      "Ice Wand",
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 92,
+    "skin": "default",
+    "team": []
+  },
+  "Gabriella": {
+    "username": "Gabriella",
+    "country": "Russia",
+    "password": "1234",
+    "xp": 538101,
+    "rank": "C-Rank",
+    "inventory": [
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 200,
+    "skin": "green",
+    "team": []
+  },
+  "Craig": {
+    "username": "Craig",
+    "country": "Nigeria",
+    "password": "1234",
+    "xp": 282769,
+    "rank": "A-Rank",
+    "inventory": [
+      "Ice Wand",
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 86,
+    "skin": "green",
+    "team": []
+  },
+  "Ryan": {
+    "username": "Ryan",
+    "country": "Japan",
+    "password": "1234",
+    "xp": 70870,
+    "rank": "A-Rank",
+    "inventory": [
+      "Mana Ring",
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 60,
+    "skin": "silver",
+    "team": []
+  },
+  "Cheryl": {
+    "username": "Cheryl",
+    "country": "Japan",
+    "password": "1234",
+    "xp": 707938,
+    "rank": "C-Rank",
+    "inventory": [
+      "Steel Armor",
+      "Mana Ring",
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 159,
+    "skin": "white",
+    "team": []
+  },
+  "Robin": {
+    "username": "Robin",
+    "country": "Brazil",
+    "password": "1234",
+    "xp": 417520,
+    "rank": "C-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Steel Armor",
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 171,
+    "skin": "default",
+    "team": []
+  },
+  "Tammy": {
+    "username": "Tammy",
+    "country": "Brazil",
+    "password": "1234",
+    "xp": 580760,
+    "rank": "C-Rank",
+    "inventory": [
+      "Magic Scroll",
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 147,
+    "skin": "white",
+    "team": []
+  },
+  "Michelle": {
+    "username": "Michelle",
+    "country": "Australia",
+    "password": "1234",
+    "xp": 628951,
+    "rank": "C-Rank",
+    "inventory": [
+      "Steel Armor",
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 212,
+    "skin": "red",
+    "team": []
+  },
+  "Jorge": {
+    "username": "Jorge",
+    "country": "Australia",
+    "password": "1234",
+    "xp": 11598,
+    "rank": "C-Rank",
+    "inventory": [
+      "Healing Potion",
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 114,
+    "skin": "silver",
+    "team": []
+  },
+  "Linda": {
+    "username": "Linda",
+    "country": "Australia",
+    "password": "1234",
+    "xp": 407041,
+    "rank": "A-Rank",
+    "inventory": [
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 290,
+    "skin": "gold",
+    "team": []
+  },
+  "Ana": {
+    "username": "Ana",
+    "country": "India",
+    "password": "1234",
+    "xp": 704362,
+    "rank": "C-Rank",
+    "inventory": [
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 80,
+    "skin": "silver",
+    "team": []
+  },
+  "Alexis": {
+    "username": "Alexis",
+    "country": "Russia",
+    "password": "1234",
+    "xp": 563200,
+    "rank": "A-Rank",
+    "inventory": [
+      "Ice Wand",
+      "Hunter Knife",
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 253,
+    "skin": "white",
+    "team": []
+  },
+  "Jennifer": {
+    "username": "Jennifer",
+    "country": "Russia",
+    "password": "1234",
+    "xp": 337216,
+    "rank": "C-Rank",
+    "inventory": [
+      "Healing Potion",
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 42,
+    "skin": "blue",
+    "team": []
+  },
+  "Raymond": {
+    "username": "Raymond",
+    "country": "UK",
+    "password": "1234",
+    "xp": 25444,
+    "rank": "A-Rank",
+    "inventory": [
+      "Magic Scroll",
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 109,
+    "skin": "default",
+    "team": []
+  },
+  "Mallory": {
+    "username": "Mallory",
+    "country": "India",
+    "password": "1234",
+    "xp": 762168,
+    "rank": "A-Rank",
+    "inventory": [
+      "Mana Ring",
+      "Ice Wand",
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 97,
+    "skin": "red",
+    "team": []
+  },
+  "Elizabeth": {
+    "username": "Elizabeth",
+    "country": "Germany",
+    "password": "1234",
+    "xp": 647911,
+    "rank": "A-Rank",
+    "inventory": [
+      "Flame Sword",
+      "Healing Potion"
+    ],
+    "achievements": [],
+    "coins": 51,
+    "skin": "silver",
+    "team": []
+  },
+  "Aaron": {
+    "username": "Aaron",
+    "country": "USA",
+    "password": "1234",
+    "xp": 425966,
+    "rank": "C-Rank",
+    "inventory": [
+      "Ice Wand",
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 131,
+    "skin": "blue",
+    "team": []
+  },
+  "Tristan": {
+    "username": "Tristan",
+    "country": "China",
+    "password": "1234",
+    "xp": 695314,
+    "rank": "A-Rank",
+    "inventory": [
+      "Magic Scroll",
+      "Hunter Knife",
+      "Healing Potion"
+    ],
+    "achievements": [],
+    "coins": 142,
+    "skin": "default",
+    "team": []
+  },
+  "Mikayla": {
+    "username": "Mikayla",
+    "country": "India",
+    "password": "1234",
+    "xp": 54352,
+    "rank": "C-Rank",
+    "inventory": [
+      "Mana Ring",
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 187,
+    "skin": "default",
+    "team": []
+  },
+  "Mark": {
+    "username": "Mark",
+    "country": "Australia",
+    "password": "1234",
+    "xp": 795524,
+    "rank": "B-Rank",
+    "inventory": [
+      "Flame Sword",
+      "Steel Armor",
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 190,
+    "skin": "blue",
+    "team": []
+  },
+  "Monica": {
+    "username": "Monica",
+    "country": "UK",
+    "password": "1234",
+    "xp": 227940,
+    "rank": "B-Rank",
+    "inventory": [
+      "Healing Potion"
+    ],
+    "achievements": [],
+    "coins": 77,
+    "skin": "black",
+    "team": []
+  },
+  "James": {
+    "username": "James",
+    "country": "Nigeria",
+    "password": "1234",
+    "xp": 359604,
+    "rank": "A-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Magic Scroll",
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 18,
+    "skin": "default",
+    "team": []
+  },
+  "Ashley": {
+    "username": "Ashley",
+    "country": "Japan",
+    "password": "1234",
+    "xp": 292719,
+    "rank": "C-Rank",
+    "inventory": [
+      "Magic Scroll",
+      "Ice Wand",
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 280,
+    "skin": "blue",
+    "team": []
+  },
+  "Seth": {
+    "username": "Seth",
+    "country": "USA",
+    "password": "1234",
+    "xp": 317659,
+    "rank": "B-Rank",
+    "inventory": [
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 157,
+    "skin": "blue",
+    "team": []
+  },
+  "Christopher": {
+    "username": "Christopher",
+    "country": "USA",
+    "password": "1234",
+    "xp": 558457,
+    "rank": "C-Rank",
+    "inventory": [
+      "Magic Scroll",
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 55,
+    "skin": "red",
+    "team": []
+  },
+  "Luke": {
+    "username": "Luke",
+    "country": "Russia",
+    "password": "1234",
+    "xp": 598072,
+    "rank": "B-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 59,
+    "skin": "silver",
+    "team": []
+  },
+  "Sarah": {
+    "username": "Sarah",
+    "country": "India",
+    "password": "1234",
+    "xp": 457254,
+    "rank": "C-Rank",
+    "inventory": [
+      "Flame Sword",
+      "Healing Potion",
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 289,
+    "skin": "gold",
+    "team": []
+  },
+  "Daniel": {
+    "username": "Daniel",
+    "country": "USA",
+    "password": "1234",
+    "xp": 679912,
+    "rank": "C-Rank",
+    "inventory": [
+      "Healing Potion"
+    ],
+    "achievements": [],
+    "coins": 113,
+    "skin": "default",
+    "team": []
+  },
+  "Andrea": {
+    "username": "Andrea",
+    "country": "India",
+    "password": "1234",
+    "xp": 413504,
+    "rank": "C-Rank",
+    "inventory": [
+      "Mana Ring",
+      "Magic Scroll",
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 250,
+    "skin": "green",
+    "team": []
+  },
+  "Jasmine": {
+    "username": "Jasmine",
+    "country": "USA",
+    "password": "1234",
+    "xp": 453587,
+    "rank": "C-Rank",
+    "inventory": [
+      "Mana Ring",
+      "Healing Potion"
+    ],
+    "achievements": [],
+    "coins": 220,
+    "skin": "green",
+    "team": []
+  },
+  "Amy": {
+    "username": "Amy",
+    "country": "USA",
+    "password": "1234",
+    "xp": 385935,
+    "rank": "C-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Mana Ring",
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 103,
+    "skin": "red",
+    "team": []
+  },
+  "Amber": {
+    "username": "Amber",
+    "country": "UK",
+    "password": "1234",
+    "xp": 531233,
+    "rank": "C-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Healing Potion",
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 74,
+    "skin": "red",
+    "team": []
+  },
+  "Tamara": {
+    "username": "Tamara",
+    "country": "Russia",
+    "password": "1234",
+    "xp": 217586,
+    "rank": "C-Rank",
+    "inventory": [
+      "Ice Wand",
+      "Healing Potion",
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 249,
+    "skin": "blue",
+    "team": []
+  },
+  "Carrie": {
+    "username": "Carrie",
+    "country": "UK",
+    "password": "1234",
+    "xp": 601296,
+    "rank": "B-Rank",
+    "inventory": [
+      "Mana Ring",
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 165,
+    "skin": "silver",
+    "team": []
+  },
+  "Briana": {
+    "username": "Briana",
+    "country": "Germany",
+    "password": "1234",
+    "xp": 532868,
+    "rank": "B-Rank",
+    "inventory": [
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 174,
+    "skin": "white",
+    "team": []
+  },
+  "Sean": {
+    "username": "Sean",
+    "country": "India",
+    "password": "1234",
+    "xp": 347457,
+    "rank": "B-Rank",
+    "inventory": [
+      "Mana Ring",
+      "Healing Potion"
+    ],
+    "achievements": [],
+    "coins": 194,
+    "skin": "black",
+    "team": []
+  },
+  "Caitlyn": {
+    "username": "Caitlyn",
+    "country": "Russia",
+    "password": "1234",
+    "xp": 763015,
+    "rank": "C-Rank",
+    "inventory": [
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 20,
+    "skin": "red",
+    "team": []
+  },
+  "Paul": {
+    "username": "Paul",
+    "country": "Japan",
+    "password": "1234",
+    "xp": 246024,
+    "rank": "C-Rank",
+    "inventory": [
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 229,
+    "skin": "white",
+    "team": []
+  },
+  "Barbara": {
+    "username": "Barbara",
+    "country": "Japan",
+    "password": "1234",
+    "xp": 178495,
+    "rank": "A-Rank",
+    "inventory": [
+      "Magic Scroll",
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 195,
+    "skin": "default",
+    "team": []
+  },
+  "Kelly": {
+    "username": "Kelly",
+    "country": "USA",
+    "password": "1234",
+    "xp": 611748,
+    "rank": "B-Rank",
+    "inventory": [
+      "Ice Wand",
+      "Mana Ring",
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 218,
+    "skin": "green",
+    "team": []
+  },
+  "Jaime": {
+    "username": "Jaime",
+    "country": "China",
+    "password": "1234",
+    "xp": 313734,
+    "rank": "A-Rank",
+    "inventory": [
+      "Ice Wand",
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 198,
+    "skin": "green",
+    "team": []
+  },
+  "Jacob": {
+    "username": "Jacob",
+    "country": "India",
+    "password": "1234",
+    "xp": 31476,
+    "rank": "B-Rank",
+    "inventory": [
+      "Mana Ring",
+      "Ice Wand"
     ],
     "achievements": [],
     "coins": 130,
+    "skin": "white",
+    "team": []
+  },
+  "Chloe": {
+    "username": "Chloe",
+    "country": "Russia",
+    "password": "1234",
+    "xp": 78808,
+    "rank": "A-Rank",
+    "inventory": [
+      "Ice Wand",
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 196,
+    "skin": "gold",
+    "team": []
+  },
+  "Diane": {
+    "username": "Diane",
+    "country": "Japan",
+    "password": "1234",
+    "xp": 75283,
+    "rank": "B-Rank",
+    "inventory": [
+      "Healing Potion"
+    ],
+    "achievements": [],
+    "coins": 146,
+    "skin": "white",
+    "team": []
+  },
+  "Nancy": {
+    "username": "Nancy",
+    "country": "India",
+    "password": "1234",
+    "xp": 68224,
+    "rank": "B-Rank",
+    "inventory": [
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 41,
+    "skin": "blue",
+    "team": []
+  },
+  "Sandra": {
+    "username": "Sandra",
+    "country": "UK",
+    "password": "1234",
+    "xp": 379908,
+    "rank": "C-Rank",
+    "inventory": [
+      "Steel Armor",
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 24,
+    "skin": "red",
+    "team": []
+  },
+  "Rachael": {
+    "username": "Rachael",
+    "country": "Japan",
+    "password": "1234",
+    "xp": 503763,
+    "rank": "C-Rank",
+    "inventory": [
+      "Mana Ring",
+      "Healing Potion",
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 53,
+    "skin": "white",
+    "team": []
+  },
+  "Peter": {
+    "username": "Peter",
+    "country": "UK",
+    "password": "1234",
+    "xp": 214444,
+    "rank": "A-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 239,
+    "skin": "white",
+    "team": []
+  },
+  "Janet": {
+    "username": "Janet",
+    "country": "USA",
+    "password": "1234",
+    "xp": 692069,
+    "rank": "A-Rank",
+    "inventory": [
+      "Mana Ring",
+      "Magic Scroll",
+      "Healing Potion"
+    ],
+    "achievements": [],
+    "coins": 198,
+    "skin": "black",
+    "team": []
+  },
+  "Joshua": {
+    "username": "Joshua",
+    "country": "USA",
+    "password": "1234",
+    "xp": 792011,
+    "rank": "B-Rank",
+    "inventory": [
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 200,
+    "skin": "silver",
+    "team": []
+  },
+  "Melissa": {
+    "username": "Melissa",
+    "country": "Germany",
+    "password": "1234",
+    "xp": 399631,
+    "rank": "B-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Ice Wand",
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 248,
+    "skin": "black",
+    "team": []
+  },
+  "Patty": {
+    "username": "Patty",
+    "country": "China",
+    "password": "1234",
+    "xp": 37950,
+    "rank": "B-Rank",
+    "inventory": [
+      "Healing Potion",
+      "Ice Wand",
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 257,
+    "skin": "gold",
+    "team": []
+  },
+  "Brittany": {
+    "username": "Brittany",
+    "country": "Brazil",
+    "password": "1234",
+    "xp": 541739,
+    "rank": "A-Rank",
+    "inventory": [
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 289,
+    "skin": "gold",
+    "team": []
+  },
+  "Stephanie": {
+    "username": "Stephanie",
+    "country": "USA",
+    "password": "1234",
+    "xp": 98113,
+    "rank": "B-Rank",
+    "inventory": [
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 79,
     "skin": "default",
     "team": []
   },
-  "FrostWarden": {
-    "username": "FrostWarden",
-    "country": "canada",
-    "password": "iceward",
-    "xp": 105000,
+  "Bethany": {
+    "username": "Bethany",
+    "country": "UK",
+    "password": "1234",
+    "xp": 478418,
     "rank": "B-Rank",
     "inventory": [
-      "Novice Hunter",
-      "Frost Staff"
+      "Steel Armor"
     ],
-    "achievements": [
-      "Ice Slayer"
-    ],
-    "coins": 250,
-    "skin": "glacial",
-    "displayName": "Warden"
+    "achievements": [],
+    "coins": 166,
+    "skin": "black",
+    "team": []
   },
-  "BlazeRift": {
-    "username": "BlazeRift",
-    "country": "mexico",
-    "password": "riftfire",
-    "xp": 8000,
-    "rank": "E-Rank",
+  "Shannon": {
+    "username": "Shannon",
+    "country": "Nigeria",
+    "password": "1234",
+    "xp": 92353,
+    "rank": "C-Rank",
     "inventory": [
-      "Novice Hunter"
+      "Flame Sword",
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 176,
+    "skin": "white",
+    "team": []
+  },
+  "Donna": {
+    "username": "Donna",
+    "country": "India",
+    "password": "1234",
+    "xp": 196549,
+    "rank": "A-Rank",
+    "inventory": [
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 187,
+    "skin": "red",
+    "team": []
+  },
+  "Wendy": {
+    "username": "Wendy",
+    "country": "Japan",
+    "password": "1234",
+    "xp": 635568,
+    "rank": "C-Rank",
+    "inventory": [
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 63,
+    "skin": "default",
+    "team": []
+  },
+  "Sabrina": {
+    "username": "Sabrina",
+    "country": "Nigeria",
+    "password": "1234",
+    "xp": 317508,
+    "rank": "B-Rank",
+    "inventory": [
+      "Healing Potion",
+      "Ice Wand",
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 232,
+    "skin": "red",
+    "team": []
+  },
+  "Laura": {
+    "username": "Laura",
+    "country": "Nigeria",
+    "password": "1234",
+    "xp": 509849,
+    "rank": "B-Rank",
+    "inventory": [
+      "Healing Potion",
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 106,
+    "skin": "white",
+    "team": []
+  },
+  "Tom": {
+    "username": "Tom",
+    "country": "Russia",
+    "password": "1234",
+    "xp": 361286,
+    "rank": "A-Rank",
+    "inventory": [
+      "Mana Ring",
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 167,
+    "skin": "blue",
+    "team": []
+  },
+  "Crystal": {
+    "username": "Crystal",
+    "country": "USA",
+    "password": "1234",
+    "xp": 631825,
+    "rank": "C-Rank",
+    "inventory": [
+      "Magic Scroll",
+      "Healing Potion",
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 75,
+    "skin": "blue",
+    "team": []
+  },
+  "Dave": {
+    "username": "Dave",
+    "country": "Nigeria",
+    "password": "1234",
+    "xp": 243641,
+    "rank": "B-Rank",
+    "inventory": [
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 94,
+    "skin": "black",
+    "team": []
+  },
+  "Jeffrey": {
+    "username": "Jeffrey",
+    "country": "UK",
+    "password": "1234",
+    "xp": 400554,
+    "rank": "B-Rank",
+    "inventory": [
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 10,
+    "skin": "gold",
+    "team": []
+  },
+  "Marvin": {
+    "username": "Marvin",
+    "country": "USA",
+    "password": "1234",
+    "xp": 91706,
+    "rank": "C-Rank",
+    "inventory": [
+      "Mana Ring",
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 72,
+    "skin": "gold",
+    "team": []
+  },
+  "Dustin": {
+    "username": "Dustin",
+    "country": "Nigeria",
+    "password": "1234",
+    "xp": 322505,
+    "rank": "C-Rank",
+    "inventory": [
+      "Flame Sword",
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 270,
+    "skin": "default",
+    "team": []
+  },
+  "Heidi": {
+    "username": "Heidi",
+    "country": "UK",
+    "password": "1234",
+    "xp": 404717,
+    "rank": "C-Rank",
+    "inventory": [
+      "Magic Scroll",
+      "Steel Armor",
+      "Healing Potion"
+    ],
+    "achievements": [],
+    "coins": 190,
+    "skin": "black",
+    "team": []
+  },
+  "Brandon": {
+    "username": "Brandon",
+    "country": "USA",
+    "password": "1234",
+    "xp": 503761,
+    "rank": "A-Rank",
+    "inventory": [
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 57,
+    "skin": "blue",
+    "team": []
+  },
+  "Audrey": {
+    "username": "Audrey",
+    "country": "Russia",
+    "password": "1234",
+    "xp": 746727,
+    "rank": "A-Rank",
+    "inventory": [
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 215,
+    "skin": "gold",
+    "team": []
+  },
+  "Amanda": {
+    "username": "Amanda",
+    "country": "Germany",
+    "password": "1234",
+    "xp": 193225,
+    "rank": "A-Rank",
+    "inventory": [
+      "Mana Ring",
+      "Healing Potion"
+    ],
+    "achievements": [],
+    "coins": 181,
+    "skin": "silver",
+    "team": []
+  },
+  "Erin": {
+    "username": "Erin",
+    "country": "USA",
+    "password": "1234",
+    "xp": 672193,
+    "rank": "B-Rank",
+    "inventory": [
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 0,
+    "skin": "silver",
+    "team": []
+  },
+  "Anthony": {
+    "username": "Anthony",
+    "country": "Russia",
+    "password": "1234",
+    "xp": 658791,
+    "rank": "C-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 154,
+    "skin": "blue",
+    "team": []
+  },
+  "Cynthia": {
+    "username": "Cynthia",
+    "country": "Russia",
+    "password": "1234",
+    "xp": 454815,
+    "rank": "C-Rank",
+    "inventory": [
+      "Ice Wand",
+      "Healing Potion"
+    ],
+    "achievements": [],
+    "coins": 278,
+    "skin": "gold",
+    "team": []
+  },
+  "Catherine": {
+    "username": "Catherine",
+    "country": "India",
+    "password": "1234",
+    "xp": 303693,
+    "rank": "C-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Ice Wand",
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 203,
+    "skin": "gold",
+    "team": []
+  },
+  "Mitchell": {
+    "username": "Mitchell",
+    "country": "USA",
+    "password": "1234",
+    "xp": 476180,
+    "rank": "B-Rank",
+    "inventory": [
+      "Magic Scroll",
+      "Flame Sword"
     ],
     "achievements": [],
     "coins": 100,
-    "skin": "default",
+    "skin": "red",
     "team": []
   },
-  "StarCrest": {
-    "username": "StarCrest",
-    "country": "france",
-    "password": "creststar",
-    "xp": 110000,
-    "rank": "B-Rank",
-    "inventory": [
-      "Novice Hunter",
-      "Star Ring"
-    ],
-    "achievements": [],
-    "coins": 260,
-    "skin": "default",
-    "team": [
-      "FrostWarden"
-    ]
-  },
-  "TideBreaker": {
-    "username": "TideBreaker",
-    "country": "australia",
-    "password": "tide2025",
-    "xp": 600000,
+  "Tina": {
+    "username": "Tina",
+    "country": "USA",
+    "password": "1234",
+    "xp": 47173,
     "rank": "A-Rank",
     "inventory": [
-      "Novice Hunter",
-      "Trident"
-    ],
-    "achievements": [
-      "Wave Master"
-    ],
-    "coins": 350,
-    "skin": "default",
-    "displayName": "Tide"
-  },
-  "ShadowClaw": {
-    "username": "ShadowClaw",
-    "country": "nigeria",
-    "password": "clawdark",
-    "xp": 25000,
-    "rank": "D-Rank",
-    "inventory": [
-      "Novice Hunter"
+      "Mana Ring",
+      "Magic Scroll"
     ],
     "achievements": [],
-    "coins": 140,
+    "coins": 60,
+    "skin": "green",
+    "team": []
+  },
+  "Benjamin": {
+    "username": "Benjamin",
+    "country": "USA",
+    "password": "1234",
+    "xp": 181499,
+    "rank": "B-Rank",
+    "inventory": [
+      "Magic Scroll",
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 68,
+    "skin": "green",
+    "team": []
+  },
+  "Andrew": {
+    "username": "Andrew",
+    "country": "USA",
+    "password": "1234",
+    "xp": 567187,
+    "rank": "B-Rank",
+    "inventory": [
+      "Mana Ring",
+      "Steel Armor",
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 149,
+    "skin": "silver",
+    "team": []
+  },
+  "Susan": {
+    "username": "Susan",
+    "country": "Australia",
+    "password": "1234",
+    "xp": 399865,
+    "rank": "B-Rank",
+    "inventory": [
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 61,
+    "skin": "gold",
+    "team": []
+  },
+  "Jackson": {
+    "username": "Jackson",
+    "country": "Australia",
+    "password": "1234",
+    "xp": 430706,
+    "rank": "B-Rank",
+    "inventory": [
+      "Flame Sword",
+      "Magic Scroll",
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 242,
+    "skin": "gold",
+    "team": []
+  },
+  "David": {
+    "username": "David",
+    "country": "Russia",
+    "password": "1234",
+    "xp": 238600,
+    "rank": "B-Rank",
+    "inventory": [
+      "Magic Scroll",
+      "Steel Armor",
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 227,
+    "skin": "black",
+    "team": []
+  },
+  "Jason": {
+    "username": "Jason",
+    "country": "Russia",
+    "password": "1234",
+    "xp": 159748,
+    "rank": "C-Rank",
+    "inventory": [
+      "Healing Potion",
+      "Hunter Knife",
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 241,
+    "skin": "gold",
+    "team": []
+  },
+  "Lauren": {
+    "username": "Lauren",
+    "country": "China",
+    "password": "1234",
+    "xp": 20601,
+    "rank": "A-Rank",
+    "inventory": [
+      "Ice Wand",
+      "Hunter Knife",
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 3,
+    "skin": "white",
+    "team": []
+  },
+  "Sharon": {
+    "username": "Sharon",
+    "country": "USA",
+    "password": "1234",
+    "xp": 53178,
+    "rank": "B-Rank",
+    "inventory": [
+      "Ice Wand",
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 149,
+    "skin": "green",
+    "team": []
+  },
+  "Ronald": {
+    "username": "Ronald",
+    "country": "Australia",
+    "password": "1234",
+    "xp": 157513,
+    "rank": "C-Rank",
+    "inventory": [
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 235,
+    "skin": "white",
+    "team": []
+  },
+  "Jordan": {
+    "username": "Jordan",
+    "country": "Japan",
+    "password": "1234",
+    "xp": 412789,
+    "rank": "C-Rank",
+    "inventory": [
+      "Flame Sword",
+      "Steel Armor",
+      "Healing Potion"
+    ],
+    "achievements": [],
+    "coins": 229,
+    "skin": "blue",
+    "team": []
+  },
+  "Deborah": {
+    "username": "Deborah",
+    "country": "Nigeria",
+    "password": "1234",
+    "xp": 559623,
+    "rank": "C-Rank",
+    "inventory": [
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 178,
+    "skin": "gold",
+    "team": []
+  },
+  "Michael": {
+    "username": "Michael",
+    "country": "Russia",
+    "password": "1234",
+    "xp": 458046,
+    "rank": "B-Rank",
+    "inventory": [
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 100,
+    "skin": "silver",
+    "team": []
+  },
+  "Henry": {
+    "username": "Henry",
+    "country": "Australia",
+    "password": "1234",
+    "xp": 224191,
+    "rank": "B-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Healing Potion"
+    ],
+    "achievements": [],
+    "coins": 43,
+    "skin": "blue",
+    "team": []
+  },
+  "Vanessa": {
+    "username": "Vanessa",
+    "country": "India",
+    "password": "1234",
+    "xp": 391272,
+    "rank": "B-Rank",
+    "inventory": [
+      "Healing Potion",
+      "Ice Wand",
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 152,
+    "skin": "red",
+    "team": []
+  },
+  "Mary": {
+    "username": "Mary",
+    "country": "China",
+    "password": "1234",
+    "xp": 749166,
+    "rank": "B-Rank",
+    "inventory": [
+      "Steel Armor",
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 27,
+    "skin": "gold",
+    "team": []
+  },
+  "Samantha": {
+    "username": "Samantha",
+    "country": "Russia",
+    "password": "1234",
+    "xp": 619180,
+    "rank": "B-Rank",
+    "inventory": [
+      "Steel Armor",
+      "Healing Potion",
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 136,
     "skin": "default",
     "team": []
   },
-  "VoidSpecter": {
-    "username": "VoidSpecter",
-    "country": "south korea",
-    "password": "void99",
-    "xp": 1400000,
-    "rank": "S-Rank",
+  "Gary": {
+    "username": "Gary",
+    "country": "India",
+    "password": "1234",
+    "xp": 55935,
+    "rank": "C-Rank",
+    "inventory": [
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 3,
+    "skin": "blue",
+    "team": []
+  },
+  "Emily": {
+    "username": "Emily",
+    "country": "UK",
+    "password": "1234",
+    "xp": 76783,
+    "rank": "B-Rank",
+    "inventory": [
+      "Steel Armor",
+      "Mana Ring",
+      "Healing Potion"
+    ],
+    "achievements": [],
+    "coins": 232,
+    "skin": "green",
+    "team": []
+  },
+  "Brian": {
+    "username": "Brian",
+    "country": "Australia",
+    "password": "1234",
+    "xp": 365995,
+    "rank": "C-Rank",
+    "inventory": [
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 163,
+    "skin": "white",
+    "team": []
+  },
+  "Erica": {
+    "username": "Erica",
+    "country": "Russia",
+    "password": "1234",
+    "xp": 571933,
+    "rank": "A-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 22,
+    "skin": "green",
+    "team": []
+  },
+  "Matthew": {
+    "username": "Matthew",
+    "country": "USA",
+    "password": "1234",
+    "xp": 396614,
+    "rank": "C-Rank",
+    "inventory": [
+      "Magic Scroll",
+      "Healing Potion",
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 128,
+    "skin": "black",
+    "team": []
+  },
+  "Candice": {
+    "username": "Candice",
+    "country": "China",
+    "password": "1234",
+    "xp": 337399,
+    "rank": "A-Rank",
+    "inventory": [
+      "Steel Armor",
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 122,
+    "skin": "default",
+    "team": []
+  },
+  "Scott": {
+    "username": "Scott",
+    "country": "China",
+    "password": "1234",
+    "xp": 330669,
+    "rank": "C-Rank",
+    "inventory": [
+      "Steel Armor",
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 224,
+    "skin": "default",
+    "team": []
+  },
+  "Gregory": {
+    "username": "Gregory",
+    "country": "Russia",
+    "password": "1234",
+    "xp": 442139,
+    "rank": "B-Rank",
+    "inventory": [
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 41,
+    "skin": "green",
+    "team": []
+  },
+  "Larry": {
+    "username": "Larry",
+    "country": "Japan",
+    "password": "1234",
+    "xp": 113526,
+    "rank": "B-Rank",
+    "inventory": [
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 39,
+    "skin": "gold",
+    "team": []
+  },
+  "Ann": {
+    "username": "Ann",
+    "country": "UK",
+    "password": "1234",
+    "xp": 596165,
+    "rank": "C-Rank",
+    "inventory": [
+      "Healing Potion"
+    ],
+    "achievements": [],
+    "coins": 250,
+    "skin": "green",
+    "team": []
+  },
+  "Alexander": {
+    "username": "Alexander",
+    "country": "Brazil",
+    "password": "1234",
+    "xp": 144307,
+    "rank": "A-Rank",
+    "inventory": [
+      "Steel Armor",
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 285,
+    "skin": "black",
+    "team": []
+  },
+  "Judith": {
+    "username": "Judith",
+    "country": "China",
+    "password": "1234",
+    "xp": 649717,
+    "rank": "A-Rank",
+    "inventory": [
+      "Magic Scroll",
+      "Steel Armor",
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 236,
+    "skin": "black",
+    "team": []
+  },
+  "Keith": {
+    "username": "Keith",
+    "country": "Germany",
+    "password": "1234",
+    "xp": 295785,
+    "rank": "C-Rank",
+    "inventory": [
+      "Ice Wand",
+      "Flame Sword",
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 88,
+    "skin": "gold",
+    "team": []
+  },
+  "Stacey": {
+    "username": "Stacey",
+    "country": "Germany",
+    "password": "1234",
+    "xp": 270858,
+    "rank": "C-Rank",
+    "inventory": [
+      "Flame Sword",
+      "Hunter Knife",
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 263,
+    "skin": "gold",
+    "team": []
+  },
+  "Debra": {
+    "username": "Debra",
+    "country": "USA",
+    "password": "1234",
+    "xp": 62188,
+    "rank": "B-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 289,
+    "skin": "white",
+    "team": []
+  },
+  "Dana": {
+    "username": "Dana",
+    "country": "China",
+    "password": "1234",
+    "xp": 250713,
+    "rank": "B-Rank",
+    "inventory": [
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 122,
+    "skin": "red",
+    "team": []
+  },
+  "Nicholas": {
+    "username": "Nicholas",
+    "country": "Brazil",
+    "password": "1234",
+    "xp": 553323,
+    "rank": "B-Rank",
+    "inventory": [
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 245,
+    "skin": "black",
+    "team": []
+  },
+  "Jacqueline": {
+    "username": "Jacqueline",
+    "country": "Japan",
+    "password": "1234",
+    "xp": 620334,
+    "rank": "C-Rank",
+    "inventory": [
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 258,
+    "skin": "white",
+    "team": []
+  },
+  "Eileen": {
+    "username": "Eileen",
+    "country": "Australia",
+    "password": "1234",
+    "xp": 394814,
+    "rank": "B-Rank",
+    "inventory": [
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 79,
+    "skin": "blue",
+    "team": []
+  },
+  "Jonathon": {
+    "username": "Jonathon",
+    "country": "USA",
+    "password": "1234",
+    "xp": 545271,
+    "rank": "C-Rank",
+    "inventory": [
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 254,
+    "skin": "green",
+    "team": []
+  },
+  "Eric": {
+    "username": "Eric",
+    "country": "Japan",
+    "password": "1234",
+    "xp": 256746,
+    "rank": "A-Rank",
+    "inventory": [
+      "Magic Scroll",
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 67,
+    "skin": "silver",
+    "team": []
+  },
+  "Allison": {
+    "username": "Allison",
+    "country": "Australia",
+    "password": "1234",
+    "xp": 123260,
+    "rank": "A-Rank",
+    "inventory": [
+      "Mana Ring",
+      "Magic Scroll",
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 233,
+    "skin": "black",
+    "team": []
+  },
+  "Tony": {
+    "username": "Tony",
+    "country": "Germany",
+    "password": "1234",
+    "xp": 23249,
+    "rank": "B-Rank",
+    "inventory": [
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 253,
+    "skin": "silver",
+    "team": []
+  },
+  "Anna": {
+    "username": "Anna",
+    "country": "Nigeria",
+    "password": "1234",
+    "xp": 582552,
+    "rank": "B-Rank",
+    "inventory": [
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 70,
+    "skin": "gold",
+    "team": []
+  },
+  "Karla": {
+    "username": "Karla",
+    "country": "Germany",
+    "password": "1234",
+    "xp": 747588,
+    "rank": "A-Rank",
+    "inventory": [
+      "Steel Armor",
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 106,
+    "skin": "default",
+    "team": []
+  },
+  "Nicole": {
+    "username": "Nicole",
+    "country": "Germany",
+    "password": "1234",
+    "xp": 340466,
+    "rank": "C-Rank",
+    "inventory": [
+      "Flame Sword",
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 115,
+    "skin": "black",
+    "team": []
+  },
+  "Troy": {
+    "username": "Troy",
+    "country": "Japan",
+    "password": "1234",
+    "xp": 370890,
+    "rank": "C-Rank",
+    "inventory": [
+      "Mana Ring",
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 29,
+    "skin": "blue",
+    "team": []
+  },
+  "Steven": {
+    "username": "Steven",
+    "country": "India",
+    "password": "1234",
+    "xp": 380587,
+    "rank": "B-Rank",
+    "inventory": [
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 123,
+    "skin": "default",
+    "team": []
+  },
+  "Yvonne": {
+    "username": "Yvonne",
+    "country": "Germany",
+    "password": "1234",
+    "xp": 23045,
+    "rank": "A-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 176,
+    "skin": "gold",
+    "team": []
+  },
+  "Valerie": {
+    "username": "Valerie",
+    "country": "Germany",
+    "password": "1234",
+    "xp": 152449,
+    "rank": "B-Rank",
+    "inventory": [
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 159,
+    "skin": "blue",
+    "team": []
+  },
+  "Erika": {
+    "username": "Erika",
+    "country": "Nigeria",
+    "password": "1234",
+    "xp": 690605,
+    "rank": "B-Rank",
+    "inventory": [
+      "Steel Armor",
+      "Ice Wand",
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 209,
+    "skin": "black",
+    "team": []
+  },
+  "Leslie": {
+    "username": "Leslie",
+    "country": "China",
+    "password": "1234",
+    "xp": 569630,
+    "rank": "A-Rank",
+    "inventory": [
+      "Flame Sword",
+      "Steel Armor",
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 289,
+    "skin": "red",
+    "team": []
+  },
+  "Mackenzie": {
+    "username": "Mackenzie",
+    "country": "UK",
+    "password": "1234",
+    "xp": 438798,
+    "rank": "C-Rank",
+    "inventory": [
+      "Healing Potion",
+      "Mana Ring",
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 75,
+    "skin": "red",
+    "team": []
+  },
+  "Connor": {
+    "username": "Connor",
+    "country": "Germany",
+    "password": "1234",
+    "xp": 356083,
+    "rank": "A-Rank",
+    "inventory": [
+      "Healing Potion"
+    ],
+    "achievements": [],
+    "coins": 11,
+    "skin": "blue",
+    "team": []
+  },
+  "Morgan": {
+    "username": "Morgan",
+    "country": "China",
+    "password": "1234",
+    "xp": 788894,
+    "rank": "C-Rank",
+    "inventory": [
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 53,
+    "skin": "silver",
+    "team": []
+  },
+  "Tiffany": {
+    "username": "Tiffany",
+    "country": "Japan",
+    "password": "1234",
+    "xp": 754601,
+    "rank": "B-Rank",
+    "inventory": [
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 174,
+    "skin": "gold",
+    "team": []
+  },
+  "Randy": {
+    "username": "Randy",
+    "country": "India",
+    "password": "1234",
+    "xp": 38591,
+    "rank": "B-Rank",
+    "inventory": [
+      "Magic Scroll",
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 77,
+    "skin": "silver",
+    "team": []
+  },
+  "Shawn": {
+    "username": "Shawn",
+    "country": "China",
+    "password": "1234",
+    "xp": 257616,
+    "rank": "C-Rank",
+    "inventory": [
+      "Ice Wand",
+      "Steel Armor",
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 138,
+    "skin": "silver",
+    "team": []
+  },
+  "Dennis": {
+    "username": "Dennis",
+    "country": "India",
+    "password": "1234",
+    "xp": 421663,
+    "rank": "C-Rank",
+    "inventory": [
+      "Mana Ring",
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 17,
+    "skin": "black",
+    "team": []
+  },
+  "Abigail": {
+    "username": "Abigail",
+    "country": "India",
+    "password": "1234",
+    "xp": 730207,
+    "rank": "B-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Steel Armor",
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 253,
+    "skin": "default",
+    "team": []
+  },
+  "Billy": {
+    "username": "Billy",
+    "country": "Brazil",
+    "password": "1234",
+    "xp": 31688,
+    "rank": "B-Rank",
+    "inventory": [
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 297,
+    "skin": "black",
+    "team": []
+  },
+  "Angela": {
+    "username": "Angela",
+    "country": "Germany",
+    "password": "1234",
+    "xp": 729439,
+    "rank": "B-Rank",
+    "inventory": [
+      "Magic Scroll",
+      "Steel Armor",
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 106,
+    "skin": "red",
+    "team": []
+  },
+  "Sheena": {
+    "username": "Sheena",
+    "country": "Nigeria",
+    "password": "1234",
+    "xp": 603534,
+    "rank": "A-Rank",
+    "inventory": [
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 272,
+    "skin": "white",
+    "team": []
+  },
+  "Bobby": {
+    "username": "Bobby",
+    "country": "Japan",
+    "password": "1234",
+    "xp": 180447,
+    "rank": "C-Rank",
+    "inventory": [
+      "Ice Wand",
+      "Hunter Knife",
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 26,
+    "skin": "blue",
+    "team": []
+  },
+  "Kara": {
+    "username": "Kara",
+    "country": "Nigeria",
+    "password": "1234",
+    "xp": 371319,
+    "rank": "C-Rank",
+    "inventory": [
+      "Magic Scroll",
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 206,
+    "skin": "gold",
+    "team": []
+  },
+  "Diana": {
+    "username": "Diana",
+    "country": "India",
+    "password": "1234",
+    "xp": 188295,
+    "rank": "A-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Steel Armor",
+      "Healing Potion"
+    ],
+    "achievements": [],
+    "coins": 174,
+    "skin": "default",
+    "team": []
+  },
+  "Raven": {
+    "username": "Raven",
+    "country": "Russia",
+    "password": "1234",
+    "xp": 766678,
+    "rank": "A-Rank",
+    "inventory": [
+      "Ice Wand",
+      "Flame Sword",
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 96,
+    "skin": "red",
+    "team": []
+  },
+  "Danielle": {
+    "username": "Danielle",
+    "country": "UK",
+    "password": "1234",
+    "xp": 585539,
+    "rank": "C-Rank",
+    "inventory": [
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 86,
+    "skin": "red",
+    "team": []
+  },
+  "Nathan": {
+    "username": "Nathan",
+    "country": "Japan",
+    "password": "1234",
+    "xp": 700866,
+    "rank": "B-Rank",
+    "inventory": [
+      "Flame Sword",
+      "Mana Ring",
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 196,
+    "skin": "gold",
+    "team": []
+  },
+  "Jared": {
+    "username": "Jared",
+    "country": "Brazil",
+    "password": "1234",
+    "xp": 288668,
+    "rank": "C-Rank",
+    "inventory": [
+      "Ice Wand",
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 143,
+    "skin": "black",
+    "team": []
+  },
+  "Brenda": {
+    "username": "Brenda",
+    "country": "China",
+    "password": "1234",
+    "xp": 573998,
+    "rank": "B-Rank",
+    "inventory": [
+      "Healing Potion",
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 221,
+    "skin": "blue",
+    "team": []
+  },
+  "Alan": {
+    "username": "Alan",
+    "country": "China",
+    "password": "1234",
+    "xp": 16215,
+    "rank": "C-Rank",
+    "inventory": [
+      "Flame Sword",
+      "Mana Ring",
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 184,
+    "skin": "silver",
+    "team": []
+  },
+  "Edward": {
+    "username": "Edward",
+    "country": "China",
+    "password": "1234",
+    "xp": 48135,
+    "rank": "A-Rank",
+    "inventory": [
+      "Mana Ring",
+      "Healing Potion",
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 185,
+    "skin": "blue",
+    "team": []
+  },
+  "Mathew": {
+    "username": "Mathew",
+    "country": "Germany",
+    "password": "1234",
+    "xp": 723302,
+    "rank": "B-Rank",
+    "inventory": [
+      "Flame Sword",
+      "Steel Armor",
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 127,
+    "skin": "green",
+    "team": []
+  },
+  "Kristine": {
+    "username": "Kristine",
+    "country": "Japan",
+    "password": "1234",
+    "xp": 297805,
+    "rank": "A-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 229,
+    "skin": "green",
+    "team": []
+  },
+  "Blake": {
+    "username": "Blake",
+    "country": "Russia",
+    "password": "1234",
+    "xp": 790178,
+    "rank": "A-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Healing Potion",
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 225,
+    "skin": "red",
+    "team": []
+  },
+  "Frank": {
+    "username": "Frank",
+    "country": "UK",
+    "password": "1234",
+    "xp": 457476,
+    "rank": "A-Rank",
+    "inventory": [
+      "Steel Armor",
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 167,
+    "skin": "red",
+    "team": []
+  },
+  "Ralph": {
+    "username": "Ralph",
+    "country": "India",
+    "password": "1234",
+    "xp": 331932,
+    "rank": "B-Rank",
+    "inventory": [
+      "Healing Potion",
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 197,
+    "skin": "gold",
+    "team": []
+  },
+  "Timothy": {
+    "username": "Timothy",
+    "country": "UK",
+    "password": "1234",
+    "xp": 676237,
+    "rank": "B-Rank",
+    "inventory": [
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 238,
+    "skin": "white",
+    "team": []
+  },
+  "Hayden": {
+    "username": "Hayden",
+    "country": "Japan",
+    "password": "1234",
+    "xp": 606418,
+    "rank": "B-Rank",
+    "inventory": [
+      "Magic Scroll",
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 203,
+    "skin": "silver",
+    "team": []
+  },
+  "Alexandra": {
+    "username": "Alexandra",
+    "country": "Japan",
+    "password": "1234",
+    "xp": 557034,
+    "rank": "C-Rank",
+    "inventory": [
+      "Ice Wand",
+      "Magic Scroll",
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 2,
+    "skin": "red",
+    "team": []
+  },
+  "Chad": {
+    "username": "Chad",
+    "country": "USA",
+    "password": "1234",
+    "xp": 210040,
+    "rank": "B-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 12,
+    "skin": "white",
+    "team": []
+  },
+  "Cory": {
+    "username": "Cory",
+    "country": "Japan",
+    "password": "1234",
+    "xp": 421721,
+    "rank": "A-Rank",
+    "inventory": [
+      "Magic Scroll",
+      "Steel Armor",
+      "Healing Potion"
+    ],
+    "achievements": [],
+    "coins": 75,
+    "skin": "gold",
+    "team": []
+  },
+  "Regina": {
+    "username": "Regina",
+    "country": "China",
+    "password": "1234",
+    "xp": 330966,
+    "rank": "C-Rank",
+    "inventory": [
+      "Healing Potion"
+    ],
+    "achievements": [],
+    "coins": 246,
+    "skin": "default",
+    "team": []
+  },
+  "Theresa": {
+    "username": "Theresa",
+    "country": "China",
+    "password": "1234",
+    "xp": 775260,
+    "rank": "C-Rank",
+    "inventory": [
+      "Flame Sword",
+      "Ice Wand",
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 92,
+    "skin": "white",
+    "team": []
+  },
+  "Holly": {
+    "username": "Holly",
+    "country": "USA",
+    "password": "1234",
+    "xp": 624343,
+    "rank": "C-Rank",
+    "inventory": [
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 135,
+    "skin": "green",
+    "team": []
+  },
+  "Patricia": {
+    "username": "Patricia",
+    "country": "Nigeria",
+    "password": "1234",
+    "xp": 283641,
+    "rank": "B-Rank",
+    "inventory": [
+      "Ice Wand",
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 264,
+    "skin": "silver",
+    "team": []
+  },
+  "Courtney": {
+    "username": "Courtney",
+    "country": "Russia",
+    "password": "1234",
+    "xp": 172737,
+    "rank": "B-Rank",
+    "inventory": [
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 299,
+    "skin": "blue",
+    "team": []
+  },
+  "Terri": {
+    "username": "Terri",
+    "country": "China",
+    "password": "1234",
+    "xp": 682713,
+    "rank": "C-Rank",
+    "inventory": [
+      "Ice Wand",
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 98,
+    "skin": "silver",
+    "team": []
+  },
+  "Cameron": {
+    "username": "Cameron",
+    "country": "Germany",
+    "password": "1234",
+    "xp": 650567,
+    "rank": "A-Rank",
+    "inventory": [
+      "Healing Potion",
+      "Flame Sword",
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 69,
+    "skin": "silver",
+    "team": []
+  },
+  "Bruce": {
+    "username": "Bruce",
+    "country": "India",
+    "password": "1234",
+    "xp": 592924,
+    "rank": "B-Rank",
+    "inventory": [
+      "Magic Scroll",
+      "Hunter Knife",
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 53,
+    "skin": "gold",
+    "team": []
+  },
+  "Phillip": {
+    "username": "Phillip",
+    "country": "Nigeria",
+    "password": "1234",
+    "xp": 647052,
+    "rank": "B-Rank",
+    "inventory": [
+      "Ice Wand",
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 262,
+    "skin": "white",
+    "team": []
+  },
+  "April": {
+    "username": "April",
+    "country": "USA",
+    "password": "1234",
+    "xp": 677490,
+    "rank": "C-Rank",
+    "inventory": [
+      "Healing Potion"
+    ],
+    "achievements": [],
+    "coins": 64,
+    "skin": "default",
+    "team": []
+  },
+  "Shane": {
+    "username": "Shane",
+    "country": "Australia",
+    "password": "1234",
+    "xp": 364302,
+    "rank": "C-Rank",
+    "inventory": [
+      "Flame Sword",
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 159,
+    "skin": "gold",
+    "team": []
+  },
+  "Tracy": {
+    "username": "Tracy",
+    "country": "Australia",
+    "password": "1234",
+    "xp": 64768,
+    "rank": "A-Rank",
+    "inventory": [
+      "Healing Potion",
+      "Magic Scroll",
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 209,
+    "skin": "default",
+    "team": []
+  },
+  "Rodney": {
+    "username": "Rodney",
+    "country": "Nigeria",
+    "password": "1234",
+    "xp": 472114,
+    "rank": "B-Rank",
+    "inventory": [
+      "Ice Wand",
+      "Magic Scroll",
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 288,
+    "skin": "silver",
+    "team": []
+  },
+  "Micheal": {
+    "username": "Micheal",
+    "country": "Japan",
+    "password": "1234",
+    "xp": 442251,
+    "rank": "C-Rank",
+    "inventory": [
+      "Healing Potion",
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 32,
+    "skin": "white",
+    "team": []
+  },
+  "Jose": {
+    "username": "Jose",
+    "country": "USA",
+    "password": "1234",
+    "xp": 110983,
+    "rank": "C-Rank",
+    "inventory": [
+      "Healing Potion"
+    ],
+    "achievements": [],
+    "coins": 206,
+    "skin": "default",
+    "team": []
+  },
+  "Kimberly": {
+    "username": "Kimberly",
+    "country": "Russia",
+    "password": "1234",
+    "xp": 348483,
+    "rank": "A-Rank",
+    "inventory": [
+      "Ice Wand",
+      "Flame Sword",
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 243,
+    "skin": "red",
+    "team": []
+  },
+  "Caleb": {
+    "username": "Caleb",
+    "country": "China",
+    "password": "1234",
+    "xp": 64236,
+    "rank": "A-Rank",
+    "inventory": [
+      "Hunter Knife",
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 264,
+    "skin": "red",
+    "team": []
+  },
+  "Stacy": {
+    "username": "Stacy",
+    "country": "Nigeria",
+    "password": "1234",
+    "xp": 93983,
+    "rank": "C-Rank",
+    "inventory": [
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 16,
+    "skin": "blue",
+    "team": []
+  },
+  "Eddie": {
+    "username": "Eddie",
+    "country": "Brazil",
+    "password": "1234",
+    "xp": 551691,
+    "rank": "A-Rank",
+    "inventory": [
+      "Steel Armor"
+    ],
+    "achievements": [],
+    "coins": 172,
+    "skin": "blue",
+    "team": []
+  },
+  "Natalie": {
+    "username": "Natalie",
+    "country": "Japan",
+    "password": "1234",
+    "xp": 584913,
+    "rank": "C-Rank",
+    "inventory": [
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 124,
+    "skin": "white",
+    "team": []
+  },
+  "Tyler": {
+    "username": "Tyler",
+    "country": "Russia",
+    "password": "1234",
+    "xp": 35006,
+    "rank": "A-Rank",
+    "inventory": [
+      "Flame Sword",
+      "Steel Armor",
+      "Hunter Knife"
+    ],
+    "achievements": [],
+    "coins": 115,
+    "skin": "green",
+    "team": []
+  },
+  "Sally": {
+    "username": "Sally",
+    "country": "Brazil",
+    "password": "1234",
+    "xp": 676550,
+    "rank": "C-Rank",
+    "inventory": [
+      "Magic Scroll"
+    ],
+    "achievements": [],
+    "coins": 115,
+    "skin": "blue",
+    "team": []
+  },
+  "Marcus": {
+    "username": "Marcus",
+    "country": "Russia",
+    "password": "1234",
+    "xp": 451186,
+    "rank": "C-Rank",
+    "inventory": [
+      "Healing Potion",
+      "Steel Armor",
+      "Mana Ring"
+    ],
+    "achievements": [],
+    "coins": 6,
+    "skin": "blue",
+    "team": []
+  },
+  "Vernon": {
+    "username": "Vernon",
+    "country": "India",
+    "password": "1234",
+    "xp": 622002,
+    "rank": "B-Rank",
+    "inventory": [
+      "Ice Wand",
+      "Healing Potion",
+      "Flame Sword"
+    ],
+    "achievements": [],
+    "coins": 9,
+    "skin": "default",
+    "team": []
+  },
+  "Victor": {
+    "username": "Victor",
+    "country": "China",
+    "password": "1234",
+    "xp": 349029,
+    "rank": "C-Rank",
+    "inventory": [
+      "Ice Wand"
+    ],
+    "achievements": [],
+    "coins": 57,
+    "skin": "blue",
+    "team": []
+  },
+  "rishab": {
+    "username": "rishab",
+    "country": "india",
+    "password": "3645826da84736e67d1c8be998278b7de38e6f16c07075a52e15a3be28dc8af5",
+    "xp": 243,
+    "rank": "E-Rank",
     "inventory": [
       "Novice Hunter",
-      "Dark Orb",
-      "Shadow Cloak"
+      "XP Booster"
     ],
-    "achievements": [
-      "Void Walker",
-      "Elite Slayer"
-    ],
-    "coins": 480,
-    "skin": "shadow",
-    "team": [
-      "StormPulse",
-      "SandViper"
-    ]
+    "achievements": [],
+    "coins": 148,
+    "skin": "default",
+    "team": [],
+    "displayName": "rishu"
   }
 }

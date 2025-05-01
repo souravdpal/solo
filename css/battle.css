@@ -1,64 +1,88 @@
-/* css/battle.css */
-.battle-card {
-    background: rgba(26, 26, 46, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
-    text-align: center;
-  }
-  
-  #monsters-list {
-    margin: 10px 0;
-  }
-  
-  .monster-option {
-    background: #16213e;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
-  
-  .monster-option:hover {
-    transform: scale(1.05);
-  }
-  
-  #battle-result {
-    color: #ff0000;
-    margin-top: 10px;
-  }
-.battle-option {
-  background: linear-gradient(135deg, #16213e, #1a1a2e);
-  padding: 20px;
-  margin: 10px 0;
-  border-radius: 12px;
+body {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
-  transition: all 0.3s;
+  height: 100vh;
 }
 
-.battle-option:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
-  animation: battleGlow 0.5s infinite alternate;
+.battle-container {
+  background: #2c2c2c;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 300px;
 }
 
-@keyframes battleGlow {
-  from { box-shadow: 0 0 10px #ff00ff; }
-  to { box-shadow: 0 0 20px #00f0ff; }
+.title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-.battle-option p {
-  color: #00f0ff;
-  font-size: 18px;
+.title span {
+  color: #ff4444;
 }
 
-@media (max-width: 768px) {
-  .battle-option {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.stats {
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #333;
+  border-radius: 5px;
+}
+
+.stats p {
+  margin: 5px 0;
+}
+
+.btn {
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #cc0000;
+}
+
+.btn:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+.result {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  animation: fadeIn 0.5s;
+}
+
+.win {
+  background-color: #4caf50;
+  color: white;
+}
+
+.lose {
+  background-color: #f44336;
+  color: white;
+}
+
+.error {
+  background-color: #ff9800;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

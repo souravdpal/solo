@@ -2,34 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" href="assets/images/solo.png" type="image/svg+xml">
-
-  <link rel="icon" href="/favicon.png" type="image/svg+xml">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rise, Hunter - Notifications</title>
+  <title>Solo Leveling - Notifications</title>
   <link rel="stylesheet" href="/css/notifications.css">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/x-icon" href="/assets/images/solo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="notifications-container" class="notifications-container">
-    <h1 class="title">Notifications <span>🔔</span></h1>
-    <button id="back-to-quests" class="btn">BACK TO QUESTS</button>
-    <div id="notifications-card" class="notifications-card">
-      <h2>Your Notifications</h2>
-      <ul id="notifications-list" class="notifications-list"></ul>
-      <p id="no-notifications" class="no-notifications">No new notifications.</p>
+  <div class="notifications-container">
+    <h1 class="title">NOTIFICATIONS <span>🔔</span></h1>
+    <div id="notifications-list" class="notifications-list">
+      <!-- Notifications will be populated here -->
     </div>
+    <button id="clear-btn" class="btn">Clear Notifications</button>
   </div>
-
-  <!-- Notification Popup -->
-  <div id="notification-popup" class="notification-popup hidden">
-    <div class="notification-content">
-      <span id="close-popup" class="close">×</span>
-      <p id="popup-message"></p>
-    </div>
-  </div>
-
   <script src="/js/notifications.js"></script>
 </body>
 </html>

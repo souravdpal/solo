@@ -1,78 +1,46 @@
-document.addEventListener('DOMContentLoaded', async () => {
-  const backToQuestsBtn = document.getElementById('back-to-quests');
-  const clearAllBtn = document.getElementById('clear-all');
+document.addEventListener('DOMContentLoaded', () => {
   const notificationsList = document.getElementById('notifications-list');
+  const clearBtn = document.getElementById('clear-btn');
 
-  async function fetchNotifications() {
-    try {
-      const response = await fetch('/js/json/notifications.json');
-      if (!response.ok) throw new Error('Failed to fetch notifications');
-      return await response.json();
-    } catch (error) {
-      console.error('Error fetching notifications:', error.message);
-      return {};
+  // Load global notifications
+  function loadNotifications() {
+    // If user has cleared notifications this session, show nothing
+    if (sessionStorage.getItem('notificationsCleared') === 'true') {
+      notificationsList.innerHTML = '<p>No notifications available.</p>';
+      return;
     }
-  }
 
-  async function renderNotifications() {
-    const notificationsData = await fetchNotifications();
-    const username = sessionStorage.getItem('username');
-    const notifications = notificationsData[username] || [];
-
-    if (notificationsList) {
-      notificationsList.innerHTML = '';
-      notifications.forEach(notification => {
-        const li = document.createElement('li');
-        li.className = notification.read ? '' : 'unread';
-        li.innerHTML = `
-          <span class="notification-message">${notification.message}</span>
-          <span class="notification-timestamp">${new Date(notification.timestamp).toLocaleString()}</span>
-          ${!notification.read ? `<button class="mark-read-btn" data-id="${notification.id}">Mark as Read</button>` : ''}
-        `;
-        notificationsList.appendChild(li);
-      });
-    }
-  }
-
-  if (backToQuestsBtn) {
-    backToQuestsBtn.addEventListener('click', () => {
-      window.location.href = '/quests.html';
-    });
-  }
-
-  if (clearAllBtn) {
-    clearAllBtn.addEventListener('click', async () => {
-      const notificationsData = await fetchNotifications();
-      const username = sessionStorage.getItem('username');
-      notificationsData[username] = [];
-      await fetch('/js/json/notifications.json', {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(notificationsData)
-      });
-      renderNotifications();
-    });
-  }
-
-  if (notificationsList) {
-    notificationsList.addEventListener('click', async (e) => {
-      if (e.target.classList.contains('mark-read-btn')) {
-        const notificationId = parseInt(e.target.dataset.id);
-        const notificationsData = await fetchNotifications();
-        const username = sessionStorage.getItem('username');
-        const notification = notificationsData[username].find(n => n.id === notificationId);
-        if (notification) {
-          notification.read = true;
-          await fetch('/js/json/notifications.json', {
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(notificationsData)
-          });
-          renderNotifications();
+    fetch('/js/json/notifications.json')
+      .then(response => response.json())
+      .then(data => {
+        const notifications = data.notifications || [];
+        if (notifications.length === 0) {
+          notificationsList.innerHTML = '<p>No notifications available.</p>';
+        } else {
+          notificationsList.innerHTML = notifications
+            .map(notification => `<div class="notification">${notification}</div>`)
+            .join('');
         }
-      }
-    });
-
-    renderNotifications();
+      })
+      .catch(error => {
+        console.error('Error loading notifications:', error);
+        notificationsList.innerHTML = '<p>Error loading notifications.</p>';
+      });
   }
+
+  // Initial load
+  loadNotifications();
+
+  // Frontend-only: Clear notifications temporarily
+  clearBtn.addEventListener('click', () => {
+    sessionStorage.setItem('notificationsCleared', 'true');
+    notificationsList.innerHTML = '<p>No notifications available.</p>';
+  });
+
+  // Auto-refresh every 30 seconds (only if not cleared)
+  setInterval(() => {
+    if (sessionStorage.getItem('notificationsCleared') !== 'true') {
+      loadNotifications();
+    }
+  }, 30000);
 });
