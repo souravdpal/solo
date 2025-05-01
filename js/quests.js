@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     return rankThresholds.find(r => xp < (rankThresholds[rankThresholds.length - 1].xp || Infinity) && xp >= r.xp) || rankThresholds[0];
   }
 
-  async function fetchUser() {
+  async function fetchUser(e) { e.preventDefault();
     try {
       const response = await fetch('/api/get-session-username');
       if (!response.ok) {
