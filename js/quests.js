@@ -385,7 +385,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Initialization
   user = await fetchUser();
-  if (!user) {
+  /*if (!user) {
     dashboard.innerHTML = `
       <h1 class="title">Rise, Hunter! <span>⚡</span></h1>
       <p style="color: #ff4d4d; font-size: 16px; margin: 20px 0;">
@@ -394,7 +394,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     `;
     return;
   }
-
+*/
   quests = await fetchQuests();
   xp = user.xp || 0;
   const users = await fetchUsersFromData();
